@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Al Muttaqin Kids — Portal Edukasi Islam Anak | Majelis Ta'lim Al Muttaqin</title>
+  <meta name="description" content="Portal Edukasi Islam Anak — Semesta Kisah Kampung Al-Muttaqin di bawah naungan Majelis Ta'lim Al Muttaqin (Mazhab Syafi'i – Aswaja). 18 Buku Pintar ISO A5, 3 Buku Eksklusif, Game Jejak Kisah Kampung, Animasi Shorts 30 Detik & Transparansi Sahabat Jariyah." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Al Muttaqin Kids — Belajar Islam Ceria, Tumbuh Berakhlak Mulia" />
+  <meta property="og:description" content="Portal resmi Al Muttaqin Kids (Majelis Ta'lim Al Muttaqin): 18 Buku Pintar A5, Game 15 Misi Kebaikan, LKS Interaktif & Program Sahabat Jariyah." />
+  <meta property="og:image" content="https://ahmadizzuddinalqosam-bot.github.io/al-muttaqin-kids/assets/hero/MAM_HERO_KELUARGA_ALMUTTAQIN_V4.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" href="assets/logo/LOGO_AL_MUTTAQIN_MASTER_RESOLUSI_2000PX_TRANSPARAN.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Optimized 4 Core Google Fonts (Lighthouse 90+ Mobile-First) -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Noto+Naskh+Arabic:wght@600;700&family=Nunito:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-canvas-cream: #F8F4E6;
+      --bg-card-ivory: #F8F5EB;
+      --bg-world-warm: #F3E9D7;
+      --bg-story-mint: #F2F8F4;
+      --bg-alert-coral: #FDF6F4;
+
+      --brand-emerald-cover: #0B6B3A;
+      --brand-emerald-deep: #125A3E;
+      --brand-islamic-green: #185B43;
+      --text-charcoal: #232323;
+      --text-muted: #506057;
+
+      --accent-gold-badge: #D4A017;
+      --accent-waqar-gold: #D4A037;
+      --accent-soft-green: #A8D6BA;
+      --accent-level-b: #FFF3C4;
+      --accent-sky-lks: #46A5D7;
+      --accent-sky-soft: #E6F3FF;
+      --accent-zahra-pink: #E79BB3;
+
+      --radius-card: 22px;
+      --shadow-warm: 0 10px 28px rgba(18, 90, 62, 0.09);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-canvas-cream);
+      color: var(--text-charcoal);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    h1, h2, .display-font { font-family: 'Baloo 2', 'Poppins', sans-serif; }
+    h3, h4, .ui-font { font-family: 'Poppins', sans-serif; }
+    .serif-quote { font-family: Georgia, 'Bookman Old Style', serif; }
+    .arabic-text {
+      font-family: 'Noto Naskh Arabic', serif;
+      direction: rtl;
+      unicode-bidi: isolate;
+      font-size: clamp(1.75rem, 3.2vw, 2.2rem);
+      line-height: 2.05;
+      color: var(--brand-emerald-deep);
+      font-weight: 700;
+    }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+    /* Kid-Friendly Tactile 3D Pill Buttons (48px-54px) */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 50px;
+      padding: 11px 22px;
+      border-radius: 999px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.12s ease, filter 0.15s ease;
+    }
+    .btn:active { transform: translateY(2px); }
+    .btn-gold { background: var(--accent-gold-badge); color: var(--text-charcoal); border-bottom: 4px solid #9E740B; box-shadow: 0 6px 16px rgba(212,160,23,0.26); }
+    .btn-emerald { background: var(--brand-emerald-cover); color: #FFFFFF; border-bottom: 4px solid #074927; box-shadow: 0 6px 16px rgba(11,107,58,0.24); }
+    .btn-sky { background: var(--accent-sky-lks); color: #FFFFFF; border-bottom: 4px solid #2A79A5; }
+    .btn-outline { background: #FFFFFF; color: var(--brand-emerald-deep); border: 2px solid var(--brand-emerald-cover); border-bottom: 4px solid var(--brand-emerald-deep); }
+    .btn:hover { filter: brightness(1.05); }
+    .btn-sm { min-height: 44px; padding: 8px 16px; font-size: 0.83rem; }
+
+    /* ZONA 1: STICKY HEADER */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(248, 244, 230, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 2.5px solid var(--accent-gold-badge);
+      box-shadow: 0 4px 14px rgba(18, 90, 62, 0.06);
+    }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 9px 0; }
+    .brand-lockup { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; flex-shrink: 0; }
+    .brand-logo-img { height: 64px; width: 64px; object-fit: contain; display: block; }
+    .brand-text-col { display: flex; flex-direction: column; line-height: 1.15; }
+    .brand-parent { font-family: 'Poppins', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.6px; color: var(--brand-emerald-deep); text-transform: uppercase; }
+    .brand-sub { font-family: 'Baloo 2', sans-serif; font-size: 1.38rem; font-weight: 800; color: var(--brand-emerald-cover); }
+    .brand-tagline { font-size: 0.72rem; color: var(--text-muted); font-weight: 700; }
+
+    .nav-links { display: flex; align-items: center; gap: 3px; list-style: none; }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-charcoal);
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 8px 10px;
+      border-radius: 12px;
+      white-space: nowrap;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-links a:hover { background: var(--bg-world-warm); color: var(--brand-emerald-cover); }
+    .nav-cta {
+      background: var(--accent-gold-badge) !important;
+      color: var(--text-charcoal) !important;
+      font-weight: 700 !important;
+      border-bottom: 3px solid #9E740B;
+      padding: 8px 14px !important;
+      border-radius: 999px !important;
+    }
+    .mobile-toggle {
+      display: none;
+      background: var(--brand-emerald-cover);
+      color: #FFFFFF;
+      border: none;
+      border-radius: 12px;
+      width: 48px;
+      height: 48px;
+      font-size: 1.35rem;
+      cursor: pointer;
+    }
+
+    /* ZONA 2: HERO */
+    .hero-section {
+      background: linear-gradient(175deg, #D8EEFF 0%, #EEF7FF 45%, var(--bg-canvas-cream) 100%);
+      padding: 34px 0 46px;
+      border-bottom: 2px solid #E5D9BE;
+    }
+    .hero-grid { display: grid; grid-template-columns: 1.04fr 0.96fr; gap: 28px; align-items: center; }
+    .eyebrow-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--brand-emerald-cover); color: #FFFFFF;
+      font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.78rem;
+      padding: 6px 15px; border-radius: 999px; border: 2px solid var(--accent-gold-badge);
+      margin-bottom: 12px;
+    }
+    .hero-title { font-size: clamp(2rem, 3.9vw, 3.05rem); line-height: 1.12; color: var(--brand-emerald-deep); margin-bottom: 12px; }
+    .hero-title span { color: #B47E06; }
+    .hero-desc { font-size: 1rem; color: #34433B; margin-bottom: 20px; max-width: 570px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
+    .level-strip { display: flex; flex-wrap: wrap; gap: 8px; }
+    .lvl-badge {
+      padding: 5px 13px; border-radius: 999px; font-size: 0.76rem; font-weight: 800;
+      font-family: 'Poppins', sans-serif; border: 1.5px solid rgba(18,90,62,0.22);
+    }
+    .lvl-a { background: var(--accent-soft-green); color: #12402A; }
+    .lvl-b { background: var(--accent-level-b); color: #5E4300; }
+    .lvl-c { background: var(--accent-zahra-pink); color: #541B2D; }
+
+    .hero-visual-card {
+      background: #FFFFFF; border-radius: 26px; padding: 14px;
+      border: 3px solid var(--accent-gold-badge);
+      box-shadow: 0 18px 36px rgba(18, 90, 62, 0.14);
+    }
+    .hero-visual-card img.main-hero { width: 100%; border-radius: 18px; display: block; object-fit: cover; }
+    .hero-highlight-bar {
+      margin-top: 12px; background: var(--bg-story-mint); border: 1.5px solid var(--accent-soft-green);
+      border-radius: 16px; padding: 12px; display: flex; align-items: center; gap: 12px;
+    }
+    .hero-highlight-bar img { width: 58px; aspect-ratio: 148 / 210; object-fit: cover; border-radius: 8px; border: 1.5px solid var(--accent-gold-badge); flex-shrink: 0; }
+    .hero-pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 26px; }
+    .pillar-shortcut {
+      background: var(--bg-card-ivory); border: 2px solid #E2D5B9; border-radius: 20px; padding: 14px;
+      text-decoration: none; color: inherit; display: flex; align-items: center; gap: 12px;
+      transition: transform 0.15s, border-color 0.15s; box-shadow: var(--shadow-warm);
+    }
+    .pillar-shortcut:hover { transform: translateY(-3px); border-color: var(--accent-gold-badge); }
+    .pillar-thumb { width: 56px; height: 56px; border-radius: 14px; object-fit: cover; border: 2px solid var(--accent-soft-green); flex-shrink: 0; }
+
+    /* GENERAL BLOCKS */
+    section.block { padding: 54px 0; }
+    section.alt-bg { background: var(--bg-world-warm); border-top: 1.5px solid #E5D7BC; border-bottom: 1.5px solid #E5D7BC; }
+    .sec-head { margin-bottom: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 14px; }
+    .sec-kicker {
+      display: inline-block; font-family: 'Poppins', sans-serif; font-size: 0.76rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.7px; color: var(--brand-emerald-cover);
+      background: var(--bg-story-mint); border: 1px solid var(--accent-soft-green);
+      padding: 4px 12px; border-radius: 999px; margin-bottom: 6px;
+    }
+    .sec-title { font-size: clamp(1.65rem, 3vw, 2.3rem); color: var(--brand-emerald-deep); line-height: 1.18; }
+    .sec-sub { color: var(--text-muted); max-width: 700px; font-size: 0.95rem; margin-top: 4px; }
+
+    /* SECTION A: KAMPUNG AL-MUTTAQIN + CINEMATIC ATMOSPHERE (NO UGLY HUE-ROTATE!) */
+    .atmo-bar { display: flex; flex-wrap: wrap; gap: 6px; background: var(--bg-card-ivory); padding: 7px; border-radius: 999px; border: 2px solid #E2D5B9; }
+    .atmo-btn { padding: 8px 15px; border-radius: 999px; border: none; background: transparent; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.8rem; cursor: pointer; color: var(--text-charcoal); }
+    .atmo-btn.active { background: var(--brand-emerald-cover); color: #FFFFFF; }
+
+    .world-layout { display: grid; grid-template-columns: 1.24fr 0.76fr; gap: 22px; align-items: stretch; }
+    .map-frame {
+      position: relative; border-radius: 24px; overflow: hidden;
+      border: 3px solid var(--accent-waqar-gold); box-shadow: var(--shadow-warm); background: #102B21;
+    }
+    .map-frame img { width: 100%; height: 100%; min-height: 360px; object-fit: cover; display: block; transition: filter 0.45s ease; }
+    .map-atmo-overlay {
+      position: absolute; inset: 0; pointer-events: none; transition: background 0.45s ease, opacity 0.45s ease;
+    }
+    .map-frame.atmo-pagi img { filter: brightness(1.03) saturate(1.06); }
+    .map-frame.atmo-pagi .map-atmo-overlay { background: linear-gradient(180deg, rgba(255,235,175,0.14) 0%, rgba(255,255,255,0) 60%); }
+    .map-frame.atmo-siang img { filter: brightness(1.07) contrast(1.04) saturate(1.08); }
+    .map-frame.atmo-siang .map-atmo-overlay { background: linear-gradient(180deg, rgba(135,206,250,0.08) 0%, rgba(255,255,255,0) 60%); }
+    .map-frame.atmo-sore img { filter: brightness(0.95) saturate(1.18) contrast(1.04); }
+    .map-frame.atmo-sore .map-atmo-overlay { background: linear-gradient(180deg, rgba(255,140,66,0.28) 0%, rgba(190,90,40,0.18) 100%); }
+    .map-frame.atmo-malam img { filter: brightness(0.42) contrast(1.18) saturate(0.85); }
+    .map-frame.atmo-malam .map-atmo-overlay {
+      background:
+        radial-gradient(circle at 55% 44%, rgba(255, 224, 130, 0.42) 0%, rgba(255, 200, 90, 0) 28%),
+        linear-gradient(180deg, rgba(10, 24, 52, 0.62) 0%, rgba(12, 32, 46, 0.35) 100%);
+    }
+
+    /* Crisp Interactive Pill Pins on Clean Text-Free 3D Map */
+    .map-hotspot {
+      position: absolute; transform: translate(-50%, -50%);
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 5px 11px 5px 6px; border-radius: 999px;
+      background: rgba(248, 244, 230, 0.95); color: var(--brand-emerald-deep);
+      border: 2.5px solid var(--brand-emerald-cover);
+      box-shadow: 0 6px 16px rgba(16, 40, 30, 0.34);
+      font-family: 'Poppins', sans-serif; font-size: 0.74rem; font-weight: 800;
+      cursor: pointer; z-index: 6; white-space: nowrap;
+      transition: transform 0.16s ease, background 0.16s ease, color 0.16s ease;
+    }
+    .map-hotspot b {
+      width: 22px; height: 22px; border-radius: 50%;
+      background: var(--brand-emerald-cover); color: #FFFFFF;
+      display: inline-flex; align-items: center; justify-content: center; font-size: 0.75rem;
+    }
+    .map-hotspot:hover, .map-hotspot.active {
+      background: var(--accent-gold-badge); color: var(--text-charcoal);
+      border-color: #FFFFFF; transform: translate(-50%, -50%) scale(1.09); z-index: 8;
+    }
+    .map-hotspot:hover b, .map-hotspot.active b { background: var(--brand-emerald-deep); color: #FFF3C4; }
+    @media (max-width: 640px) { .map-hotspot span { display: none; } .map-hotspot { padding: 4px; } }
+    .atmo-pill-overlay {
+      position: absolute; bottom: 14px; left: 14px; z-index: 7;
+      background: rgba(18, 90, 62, 0.92); color: #FFFFFF;
+      padding: 7px 14px; border-radius: 999px; font-size: 0.78rem; font-weight: 700;
+      border: 1.5px solid var(--accent-gold-badge);
+    }
+
+    .loc-detail-card {
+      background: var(--bg-card-ivory); border-radius: 24px; border: 2px solid var(--accent-gold-badge);
+      padding: 18px; box-shadow: var(--shadow-warm); display: flex; flex-direction: column; gap: 12px;
+    }
+    .loc-detail-photo { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 16px; border: 2px solid #E2D5B9; display: block; }
+    .loc-view-switch { display: flex; gap: 6px; }
+    .loc-view-btn {
+      padding: 5px 12px; border-radius: 999px; border: 1.5px solid var(--brand-emerald-cover);
+      background: #FFFFFF; color: var(--brand-emerald-deep); font-size: 0.76rem; font-weight: 700; cursor: pointer;
+    }
+    .loc-view-btn.active { background: var(--brand-emerald-cover); color: #FFFFFF; }
+    .loc-id-badge { display: inline-block; background: var(--brand-islamic-green); color: #FFFFFF; font-family: 'Poppins', sans-serif; font-size: 0.72rem; font-weight: 700; padding: 4px 11px; border-radius: 999px; }
+    .subroom-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .subroom-chips span { background: #FFFFFF; border: 1px solid var(--accent-soft-green); color: var(--brand-emerald-deep); font-size: 0.76rem; font-weight: 700; padding: 4px 10px; border-radius: 999px; }
+    .loc-thumbs-row { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-top: 18px; }
+    .loc-mini-btn {
+      background: var(--bg-card-ivory); border: 2px solid #E2D5B9; border-radius: 16px; padding: 8px;
+      text-align: left; cursor: pointer; transition: all 0.18s;
+    }
+    .loc-mini-btn.active, .loc-mini-btn:hover { border-color: var(--brand-emerald-cover); background: #FFFFFF; transform: translateY(-2px); }
+    .loc-mini-btn img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 10px; margin-bottom: 6px; display: block; }
+    .loc-mini-btn strong { display: block; font-size: 0.78rem; color: var(--brand-emerald-deep); line-height: 1.25; }
+
+    /* 4 CHARACTERS */
+    .char-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 26px; }
+    .char-card {
+      background: var(--bg-card-ivory); border-radius: 22px; border: 2px solid #E2D5B9; padding: 16px;
+      text-align: center; box-shadow: var(--shadow-warm); transition: transform 0.18s, border-color 0.18s;
+    }
+    .char-card:hover { transform: translateY(-4px); border-color: var(--accent-gold-badge); }
+    .char-card.umi-card { border-color: var(--accent-soft-green); background: var(--bg-story-mint); }
+    .char-card.zahra-card { border-color: var(--accent-zahra-pink); }
+    .char-avatar {
+      width: 156px; height: 172px; object-fit: cover; border-radius: 20px;
+      border: 3px solid #FFFFFF; box-shadow: 0 8px 18px rgba(18,90,62,0.14);
+      margin: 0 auto 12px; display: block; background: #FFFFFF;
+    }
+    .char-code { display: inline-block; font-family: 'Poppins', sans-serif; font-size: 0.7rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; background: var(--brand-islamic-green); color: #FFFFFF; margin-bottom: 6px; }
+
+    /* SECTION B: BUKU A5 + 3 EKSKLUSIF + HARGA PAKET */
+    .paket-buku-banner {
+      background: var(--bg-story-mint); border: 2px solid var(--accent-soft-green); border-radius: 20px;
+      padding: 16px 20px; margin-bottom: 18px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px;
+    }
+    .filter-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+    .filter-btn {
+      padding: 8px 14px; border-radius: 999px; border: 2px solid #DDD0B5; background: #FFFFFF;
+      font-family: 'Poppins', sans-serif; font-size: 0.8rem; font-weight: 700; color: var(--text-charcoal); cursor: pointer;
+    }
+    .filter-btn.active, .filter-btn:hover { background: var(--brand-emerald-cover); border-color: var(--brand-emerald-cover); color: #FFFFFF; }
+    .books-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(215px, 1fr)); gap: 18px; }
+    .book-card {
+      background: var(--bg-card-ivory); border: 2px solid #E2D5B9; border-radius: 20px; padding: 14px;
+      display: flex; flex-direction: column; justify-content: space-between; gap: 10px; box-shadow: var(--shadow-warm);
+      transition: transform 0.18s, border-color 0.18s;
+    }
+    .book-card:hover { transform: translateY(-3px); border-color: var(--accent-gold-badge); }
+    .book-cover-wrap { width: 100%; aspect-ratio: 148 / 210; border-radius: 14px; overflow: hidden; border: 2px solid var(--accent-waqar-gold); background: var(--brand-emerald-deep); }
+    .book-cover-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .book-cover-generated { width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: 12px; color: #FFFFFF; background: linear-gradient(160deg, var(--brand-emerald-cover), var(--brand-emerald-deep)); }
+    .book-cover-top { display: flex; align-items: center; justify-content: space-between; background: var(--bg-canvas-cream); color: var(--brand-emerald-deep); margin: -12px -12px 8px; padding: 8px 10px; border-bottom: 3px solid var(--accent-gold-badge); }
+    .book-cover-top img { width: 28px; height: 28px; object-fit: contain; }
+    .book-code-pill { background: var(--accent-gold-badge); color: var(--text-charcoal); font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 0.72rem; padding: 3px 9px; border-radius: 999px; display: inline-block; }
+    .book-status { display: inline-block; font-size: 0.7rem; font-weight: 800; padding: 3px 10px; border-radius: 999px; }
+    .st-done { background: var(--accent-soft-green); color: #0B4B2A; }
+    .st-draft { background: var(--accent-level-b); color: #664900; }
+    .st-road { background: var(--accent-sky-soft); color: #165275; }
+
+    /* SECTION C: SHORTS, GAME LIVE & LKS ANAK */
+    .media-lks-grid { display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 24px; align-items: start; }
+    .panel-box { background: var(--bg-card-ivory); border-radius: 24px; border: 2px solid #E2D5B9; padding: 22px; box-shadow: var(--shadow-warm); }
+    .shorts-mock { background: #102B21; color: #FFFFFF; border-radius: 20px; padding: 16px; border: 3px solid var(--accent-gold-badge); }
+    .shorts-strip-img { width: 100%; border-radius: 12px; margin: 12px 0; display: block; border: 2px solid rgba(212,160,23,0.5); }
+    .game-promo-box {
+      margin-top: 16px; background: linear-gradient(135deg, #0B6B3A 0%, #125A3E 100%);
+      color: #FFFFFF; border: 2.5px solid var(--accent-gold-badge); border-radius: 20px; padding: 18px;
+    }
+    .lks-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    .lks-tab-btn { padding: 9px 13px; border-radius: 14px; border: 2px solid var(--accent-sky-lks); background: #FFFFFF; color: #165275; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.8rem; cursor: pointer; }
+    .lks-tab-btn.active { background: var(--accent-sky-lks); color: #FFFFFF; }
+    .lks-pane { display: none; }
+    .lks-pane.active { display: block; }
+    .quiz-option {
+      width: 100%; text-align: left; padding: 12px 16px; margin-bottom: 8px; border-radius: 14px;
+      border: 2px solid #CDE4F5; background: #FFFFFF; font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.93rem;
+      cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+    }
+    .quiz-option:hover { border-color: var(--accent-sky-lks); background: var(--accent-sky-soft); }
+    .quiz-option.picked { background: var(--bg-story-mint); border-color: var(--brand-emerald-cover); color: var(--brand-emerald-deep); }
+    .reward-banner {
+      display: none; margin-top: 12px; background: linear-gradient(135deg, #FFF3C4, #FFE28A);
+      border: 2.5px solid var(--accent-gold-badge); border-radius: 16px; padding: 14px; text-align: center;
+      color: #4D3600; font-weight: 800; animation: popIn 0.3s ease;
+    }
+    .reward-banner.show { display: block; }
+    @keyframes popIn { from { transform: scale(0.92); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    .dalil-card { background: #FFFFFF; border: 3px double var(--brand-emerald-cover); border-radius: 18px; padding: 16px; text-align: center; margin-bottom: 12px; }
+    .song-box { background: var(--accent-sky-soft); border: 2px solid var(--accent-sky-lks); border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; }
+    .calc-row { margin-bottom: 12px; }
+    .calc-row label { display: flex; justify-content: space-between; font-weight: 700; font-size: 0.88rem; margin-bottom: 4px; }
+    .calc-row input[type="range"] { width: 100%; accent-color: var(--brand-emerald-cover); }
+    .score-result { background: var(--brand-emerald-deep); color: #FFFFFF; border-radius: 16px; padding: 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 10px; border: 2px solid var(--accent-gold-badge); }
+
+    /* SECTION D: MERCHANDISE */
+    .adab-notice { background: var(--bg-alert-coral); border: 2px solid #E5A99B; border-left: 6px solid #C0392B; border-radius: 16px; padding: 14px 18px; margin-bottom: 18px; font-size: 0.9rem; }
+    .merch-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+    .merch-card { background: var(--bg-card-ivory); border: 2px solid #E2D5B9; border-radius: 20px; padding: 14px; display: flex; flex-direction: column; justify-content: space-between; gap: 10px; box-shadow: var(--shadow-warm); transition: transform 0.18s, border-color 0.18s; }
+    .merch-card:hover { transform: translateY(-3px); border-color: var(--accent-gold-badge); }
+    .merch-img-wrap { width: 100%; aspect-ratio: 540 / 420; border-radius: 14px; overflow: hidden; border: 2px solid #E5D7BC; background: #F5EDD9; cursor: pointer; position: relative; }
+    .merch-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.25s ease; }
+    .merch-card:hover .merch-img-wrap img { transform: scale(1.04); }
+    .merch-zoom-tag { position: absolute; bottom: 8px; right: 8px; background: rgba(18,90,62,0.88); color: #FFF3C4; font-family: 'Poppins', sans-serif; font-size: 0.68rem; font-weight: 700; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--accent-gold-badge); }
+
+    /* SECTION E: JADWAL, ASATIDZ & TRANSPARANSI KEUANGAN + T-39 */
+    .schedule-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+    .sched-card { background: var(--bg-card-ivory); border: 2px solid #E2D5B9; border-top: 5px solid var(--brand-emerald-cover); border-radius: 18px; padding: 16px; box-shadow: var(--shadow-warm); }
+    .asatidz-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 14px; margin-top: 18px; }
+    .asatidz-card { background: var(--bg-card-ivory); border: 1.5px solid #DFD2B6; border-left: 5px solid var(--brand-emerald-cover); border-radius: 16px; padding: 14px 16px; }
+
+    .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 22px; }
+    .kpi-card { background: var(--bg-card-ivory); border: 2px solid #E2D5B9; border-radius: 18px; padding: 16px; text-align: center; box-shadow: var(--shadow-warm); }
+    .kpi-val { font-family: 'Baloo 2', sans-serif; font-size: 1.65rem; color: var(--brand-emerald-cover); line-height: 1.1; margin: 4px 0; }
+    .jariyah-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 24px; align-items: start; }
+    .paket-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .paket-card { background: var(--bg-card-ivory); border: 2px solid #E2D5B9; border-radius: 20px; padding: 16px; cursor: pointer; transition: all 0.18s; }
+    .paket-card.selected, .paket-card:hover { border-color: var(--brand-emerald-cover); background: var(--bg-story-mint); transform: translateY(-2px); }
+    .paket-price { font-family: 'Baloo 2', sans-serif; font-size: 1.45rem; color: var(--brand-emerald-cover); }
+
+    .form-group { margin-bottom: 12px; }
+    .form-group label { display: block; font-size: 0.84rem; font-weight: 700; margin-bottom: 4px; color: var(--brand-emerald-deep); }
+    .form-group input, .form-group select { width: 100%; padding: 11px 14px; border-radius: 12px; border: 2px solid #D9CCB0; background: #FFFFFF; font-family: inherit; font-size: 0.92rem; }
+
+    /* ZONA 3: FOOTER */
+    .site-footer { background: var(--brand-emerald-deep); color: #F4FBF7; border-top: 5px solid var(--accent-gold-badge); padding: 46px 0 28px; }
+    .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 28px; padding-bottom: 28px; border-bottom: 1px solid rgba(212,160,55,0.35); }
+    .footer-brand { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+    .footer-brand img { width: 78px; height: 78px; object-fit: contain; }
+    .pillar-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .pillar-btn {
+      background: rgba(255,255,255,0.12); color: #FFFFFF; border: 1px solid rgba(212,160,55,0.6);
+      padding: 6px 12px; border-radius: 999px; font-size: 0.8rem; font-weight: 700; cursor: pointer; font-family: inherit;
+    }
+    .pillar-btn:hover { background: rgba(212,160,23,0.35); }
+    .pillar-btn.active-pillar { background: var(--accent-gold-badge); color: var(--text-charcoal); }
+
+    /* MODAL */
+    .modal-backdrop { position: fixed; inset: 0; background: rgba(16,40,30,0.74); display: none; align-items: center; justify-content: center; padding: 18px; z-index: 200; }
+    .modal-backdrop.open { display: flex; }
+    .modal-box { background: var(--bg-canvas-cream); border: 3px solid var(--accent-gold-badge); border-radius: 24px; max-width: 740px; width: 100%; max-height: 88vh; overflow-y: auto; padding: 24px; position: relative; }
+    .modal-close { position: absolute; top: 14px; right: 14px; width: 40px; height: 40px; border-radius: 50%; border: none; background: var(--brand-emerald-cover); color: #FFFFFF; font-size: 1.2rem; cursor: pointer; }
+
+    @media (max-width: 980px) {
+      .hero-grid, .world-layout, .media-lks-grid, .jariyah-grid, .footer-grid, .schedule-grid { grid-template-columns: 1fr; }
+      #merchandise > .container > div[style*='grid-template-columns'], #modalContent > div[style*='grid-template-columns'] { grid-template-columns: 1fr !important; }
+      .hero-pillars, .kpi-grid, .char-grid { grid-template-columns: repeat(2, 1fr); }
+      .loc-thumbs-row { grid-template-columns: repeat(3, 1fr); }
+      .nav-links {
+        display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--bg-canvas-cream);
+        flex-direction: column; padding: 16px 20px; border-bottom: 3px solid var(--accent-gold-badge);
+        box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+      }
+      .nav-links.open { display: flex; }
+      .mobile-toggle { display: inline-flex; align-items: center; justify-content: center; }
+    }
+    @media (max-width: 560px) {
+      .hero-pillars, .kpi-grid, .char-grid, .paket-grid { grid-template-columns: 1fr; }
+      .loc-thumbs-row { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ZONA 1: STICKY HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#beranda" class="brand-lockup">
+        <img src="assets/logo/LOGO_AL_MUTTAQIN_MASTER_RESOLUSI_2000PX_TRANSPARAN.png" alt="Logo Resmi Majelis Ta'lim Al Muttaqin" class="brand-logo-img" />
+        <div class="brand-text-col">
+          <span class="brand-parent">Majelis Ta'lim Al Muttaqin</span>
+          <span class="brand-sub">Al Muttaqin Kids</span>
+          <span class="brand-tagline">Semesta Kisah Kampung Al-Muttaqin</span>
+        </div>
+      </a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Buka Menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#kampung">Kampung</a></li>
+        <li><a href="#buku">Buku A5</a></li>
+        <li><a href="#tonton">Tonton &amp; LKS</a></li>
+        <li><a href="#merchandise">Merchandise</a></li>
+        <li><a href="#asatidz">Majelis &amp; Jadwal</a></li>
+        <li><a href="#sahabat-jariyah" class="nav-cta">Sahabat Jariyah</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ZONA 2: HERO SECTION -->
+  <section id="beranda" class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow-pill">Kisah Al-Muttaqin • Pilar 1 dari 5 Pilar Majelis Ta'lim Al Muttaqin</div>
+          <h1 class="hero-title">Belajar Islam Ceria, <span>Tumbuh Berakhlak Mulia</span></h1>
+          <p class="hero-desc">
+            Portal edukasi Islam anak usia 4–12 tahun di bawah bimbingan <strong>Dewan Asatidz Majelis Ta'lim Al Muttaqin</strong>
+            (Manhaj Mazhab Syafi'i – Aswaja). Memadukan <strong>18 Buku Pintar 3-in-1 (ISO A5)</strong>, <strong>3 Buku Eksklusif</strong>,
+            <strong>Game 15 Misi Kebaikan</strong>, dan animasi <em>Shorts</em> 30 detik.
+          </p>
+          <div class="hero-actions">
+            <a href="#buku" class="btn btn-gold">Jelajahi Buku A5</a>
+            <a href="https://ahmadizzuddinalqosam-bot.github.io/Game-Jejak-Kisah-Kampung-Al-Muttaqin/" target="_blank" rel="noopener" class="btn btn-emerald">Mainkan Game Kampung ↗</a>
+            <a href="#tonton" class="btn btn-outline">Tonton &amp; LKS Anak</a>
+          </div>
+          <div class="level-strip">
+            <span class="lvl-badge lvl-a">Level A • KB–TK (4–5 Thn)</span>
+            <span class="lvl-badge lvl-b">Level B • SD/MI Kls 1 (6–7 Thn)</span>
+            <span class="lvl-badge lvl-c">Level C • SD/MI Kls 2 (7–8 Thn)</span>
+          </div>
+        </div>
+
+        <div class="hero-visual-card">
+          <img src="assets/hero/MAM_HERO_KELUARGA_ALMUTTAQIN_V4.webp" alt="Musholla Al-Muttaqin dan 4 Karakter Keluarga Al-Muttaqin (Kak Zahra, Al Qosam, Abi, Umi hijab hijau muda)" class="main-hero" />
+          <div class="hero-highlight-bar">
+            <img src="assets/covers/MAM_COV_MAMI01_V6.webp" alt="Sampul Buku MAM-I-01 Fiqih Ibadah Praktis" />
+            <div>
+              <span class="book-status st-done">SELESAI 100% • Rp35.000 (74 HAL A5)</span>
+              <h4 style="color:var(--brand-emerald-deep);font-size:0.95rem;margin-top:3px;">MAM-I-01: Fiqih Ibadah Praktis (v3.2 Siap Cetak)</h4>
+              <p style="font-size:0.8rem;color:var(--text-muted);">7 Bab, 54 visual 3D, 26 LKS interaktif, &amp; 7 Matriks 100 Poin Dewan Asatidz.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-pillars">
+        <a href="#kampung" class="pillar-shortcut">
+          <img src="assets/locations/MAM_LOC01_MUSHOLLA_EXTFRONT_V4.webp" alt="LOC-01 Musholla Al-Muttaqin" class="pillar-thumb" />
+          <div>
+            <strong style="color:var(--brand-emerald-deep);display:block;font-size:0.9rem;">Kampung Al-Muttaqin</strong>
+            <span style="font-size:0.78rem;color:var(--text-muted);">6 Lokasi + Galeri Interior &amp; 4 Waktu.</span>
+          </div>
+        </a>
+        <a href="#buku" class="pillar-shortcut">
+          <img src="assets/covers/MAM_COV_MAMI02_V6.webp" alt="Katalog Buku ISO A5" class="pillar-thumb" />
+          <div>
+            <strong style="color:var(--brand-emerald-deep);display:block;font-size:0.9rem;">18 Buku A5 + 3 Eksklusif</strong>
+            <span style="font-size:0.78rem;color:var(--text-muted);">Paket Batch 1 Rp180rb (6 Modul).</span>
+          </div>
+        </a>
+        <a href="https://ahmadizzuddinalqosam-bot.github.io/Game-Jejak-Kisah-Kampung-Al-Muttaqin/" target="_blank" rel="noopener" class="pillar-shortcut">
+          <img src="assets/locations/MAM_WORLD_GERBANG_KAMPUNG_V4.webp" alt="Game Jejak Kisah Kampung Al-Muttaqin" class="pillar-thumb" />
+          <div>
+            <strong style="color:var(--brand-emerald-deep);display:block;font-size:0.9rem;">Game 15 Misi Kebaikan ↗</strong>
+            <span style="font-size:0.78rem;color:var(--text-muted);">Jejak Kisah Kampung (Live Web).</span>
+          </div>
+        </a>
+        <a href="#sahabat-jariyah" class="pillar-shortcut">
+          <img src="assets/locations/MAM_LOC04_RUANGBELAJAR_V4.webp" alt="Transparansi Kas & Sahabat Jariyah" class="pillar-thumb" />
+          <div>
+            <strong style="color:var(--brand-emerald-deep);display:block;font-size:0.9rem;">Transparansi &amp; Jariyah</strong>
+            <span style="font-size:0.78rem;color:var(--text-muted);">Laporan Kas BKU &amp; ZISWAF TA 26/27.</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION A: KAMPUNG AL-MUTTAQIN + GALERI INTERIOR + 4 KARAKTER -->
+  <section id="kampung" class="block alt-bg">
+    <div class="container">
+      <div class="sec-head">
+        <div>
+          <span class="sec-kicker">World Bible V1.0 • Canon Lock V1.2 (Bebas Stempel Collage)</span>
+          <h2 class="sec-title">Jelajahi Kampung Al-Muttaqin &amp; 4 Karakter Utama</h2>
+          <p class="sec-sub">Klik langsung lokasi pada peta atau pilih miniatur 6 lokasi di bawah. Lokasi ibadah utama terkunci sebagai <strong>LOC-01 Musholla Al-Muttaqin</strong> (1 lantai tropis) lengkap dengan galeri sub-ruang.</p>
+        </div>
+        <div class="atmo-bar" role="group" aria-label="Pilih Atmosfer Waktu">
+          <button class="atmo-btn active" data-atmo="pagi">Pagi</button>
+          <button class="atmo-btn" data-atmo="siang">Siang</button>
+          <button class="atmo-btn" data-atmo="sore">Sore</button>
+          <button class="atmo-btn" data-atmo="malam">Malam</button>
+        </div>
+      </div>
+
+      <div class="world-layout">
+        <div class="map-frame atmo-pagi" id="mapFrame">
+          <img src="assets/locations/MAM_WORLD_MAP_CLEAN_V4.webp" alt="Peta Dunia Kampung Al-Muttaqin 6 Lokasi dengan LOC-01 Musholla Al-Muttaqin" />
+          <div class="map-atmo-overlay"></div>
+          <!-- Precision Interactive Pins on Clean 3D Map (100% Zero Double-Text!) -->
+          <button class="map-hotspot active" style="left:53%;top:43%;" data-loc="0" aria-label="LOC-01 Musholla Al-Muttaqin"><b>1</b><span>Musholla Al-Muttaqin</span></button>
+          <button class="map-hotspot" style="left:78%;top:69%;" data-loc="1" aria-label="LOC-02 Rumah Al Qosam"><b>2</b><span>Rumah Al Qosam</span></button>
+          <button class="map-hotspot" style="left:79%;top:24%;" data-loc="2" aria-label="LOC-03 SD Islam Al-Muttaqin"><b>3</b><span>SD Islam</span></button>
+          <button class="map-hotspot" style="left:25%;top:23%;" data-loc="3" aria-label="LOC-04 Ruang Belajar Islam"><b>4</b><span>Ruang Belajar</span></button>
+          <button class="map-hotspot" style="left:25%;top:71%;" data-loc="4" aria-label="LOC-05 Taman Kampung"><b>5</b><span>Taman Kampung</span></button>
+          <button class="map-hotspot" style="left:15%;top:49%;" data-loc="5" aria-label="LOC-06 Pasar & Warung"><b>6</b><span>Pasar &amp; Warung</span></button>
+          <div class="atmo-pill-overlay" id="atmoLabel">Atmosfer: Pagi (Hangat &amp; Cerah)</div>
+        </div>
+
+        <div class="loc-detail-card" id="locDetailCard">
+          <img src="assets/locations/MAM_LOC01_MUSHOLLA_EXTFRONT_V4.webp" alt="LOC-01 Musholla Al-Muttaqin" class="loc-detail-photo" id="locPhoto" />
+          <div class="loc-view-switch" id="locViewSwitch"></div>
+          <div>
+            <span class="loc-id-badge" id="locCode">LOC-01 • LOKASI IBADAH UTAMA</span>
+            <h3 id="locName" style="color:var(--brand-emerald-deep);font-size:1.22rem;margin-top:6px;">Musholla Al-Muttaqin</h3>
+            <p id="locDesc" style="font-size:0.89rem;color:var(--text-muted);margin-top:4px;">
+              Pusat ibadah, kajian, belajar Al-Qur'an, dan pembinaan santri cilik dengan arsitektur 1 lantai beratap limasan/tajug tropis berkubah kecil.
+            </p>
+          </div>
+          <div class="subroom-chips" id="locRooms"></div>
+        </div>
+      </div>
+
+      <div class="loc-thumbs-row" id="locThumbs"></div>
+
+      <!-- 4 KARAKTER INTI -->
+      <div style="margin-top:38px;">
+        <span class="sec-kicker">Character Canon Lock V1.2 (Resolusi Tajam)</span>
+        <h3 style="font-size:1.4rem;color:var(--brand-emerald-deep);margin-bottom:4px;">Kenali 4 Tokoh Keluarga Al-Muttaqin</h3>
+        <p style="font-size:0.89rem;color:var(--text-muted);">Seluruh aset karakter telah diverifikasi Canon V1.2 — <strong>Umi terkunci berhijab hijau muda (Sage Green)</strong> dan dibedakan tegas dari hijab dusty pink Kak Zahra.</p>
+      </div>
+      <div class="char-grid">
+        <article class="char-card">
+          <img src="assets/characters/MAM_CHR_ALQOSAM_FRONT_V4.webp" alt="CHAR-01 Al Qosam berpeci hijau" class="char-avatar" loading="lazy" />
+          <span class="char-code">CHAR-01 • ADIK</span>
+          <h3>Al Qosam</h3>
+          <div style="font-size:0.8rem;font-weight:700;color:#8A6507;margin-bottom:6px;">8 Tahun • 115 cm</div>
+          <p style="font-size:0.83rem;color:var(--text-muted);">Peci hijau (#185B43), baju koko putih berlis hijau, celana panjang hijau. Aktif, penasaran, ceria, dan pemantik pertanyaan belajar.</p>
+        </article>
+        <article class="char-card zahra-card">
+          <img src="assets/characters/MAM_CHR_ZAHRA_FRONT_V4.webp" alt="CHAR-02 Kak Zahra berhijab dusty pink" class="char-avatar" loading="lazy" />
+          <span class="char-code" style="background:#C26B87;">CHAR-02 • KAKAK</span>
+          <h3>Kak Zahra</h3>
+          <div style="font-size:0.8rem;font-weight:700;color:#8A6507;margin-bottom:6px;">11 Tahun • 135 cm</div>
+          <p style="font-size:0.83rem;color:var(--text-muted);">Hijab dusty pink (#E79BB3) berklip bunga putih, gamis panjang sopan. Cerdas, teliti, penyayang, dan sabar memberi contoh adab.</p>
+        </article>
+        <article class="char-card">
+          <img src="assets/characters/MAM_CHR_ABI_FRONT_V4.webp" alt="CHAR-03 Abi berpeci hitam dan berjanggut" class="char-avatar" loading="lazy" />
+          <span class="char-code" style="background:#232323;">CHAR-03 • AYAH</span>
+          <h3>Abi</h3>
+          <div style="font-size:0.8rem;font-weight:700;color:#8A6507;margin-bottom:6px;">40 Tahun • 175 cm</div>
+          <p style="font-size:0.83rem;color:var(--text-muted);">Peci hitam rapi, janggut terawat, koko krem/putih berrompi hijau tua. Bijaksana, humoris, dan membimbing syariat keluarga.</p>
+        </article>
+        <article class="char-card umi-card">
+          <img src="assets/characters/MAM_CHR_UMI_HIJABHIJAU_FRONT_V4.webp" alt="CHAR-04 Umi berhijab hijau muda sage green" class="char-avatar" loading="lazy" />
+          <span class="char-code" style="background:#3D7A56;">CHAR-04 • IBU (HIJAB HIJAU)</span>
+          <h3>Umi</h3>
+          <div style="font-size:0.8rem;font-weight:700;color:#8A6507;margin-bottom:6px;">36 Tahun • 160 cm</div>
+          <p style="font-size:0.83rem;color:var(--text-muted);"><strong>Wajib hijab hijau muda (Sage Green)</strong> senada gamis lembut. Lembut, telaten, dan penanam adab keseharian santri.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION B: PERPUSTAKAAN 18 BUKU A5 + 3 BUKU EKSKLUSIF -->
+  <section id="buku" class="block">
+    <div class="container">
+      <div class="sec-head">
+        <div>
+          <span class="sec-kicker">Kurikulum ISO A5 (148 × 210 mm) • 21 Materi Silabus • 6 Klaster</span>
+          <h2 class="sec-title">Perpustakaan Buku Pintar 3-in-1 &amp; Seri Eksklusif</h2>
+          <p class="sec-sub">Tersinkronisasi dengan <em>Master Roadmap 54 Buku A5</em> dan <em>Sistem Keuangan TA 2026/2027</em>. Klik kartu buku untuk membuka daftar bab rinci, kitab rujukan mu'tamad, dan kotak <em>“Awas Keliru!”</em>.</p>
+        </div>
+        <div class="filter-bar" id="jenjangBar" style="margin-bottom:0;">
+          <button class="filter-btn active" data-jenjang="I">Jenjang I (Ula)</button>
+          <button class="filter-btn" data-jenjang="II">Jenjang II (Wustha)</button>
+          <button class="filter-btn" data-jenjang="III">Jenjang III (Ulya)</button>
+        </div>
+      </div>
+
+      <div class="paket-buku-banner">
+        <div>
+          <strong style="color:var(--brand-emerald-deep);font-size:1rem;">Paket Lengkap 6 Modul Diniyah Batch 1 (378 Hal ISO A5 Full Color HD): Rp180.000</strong>
+          <p style="font-size:0.84rem;color:var(--text-muted);">Tersedia pilihan skema <strong>Full Color HD</strong>, <strong>Ekonomis (BW)</strong>, dan <strong>Wakaf / Subsidi Silang</strong> bagi santri yatim &amp; dhuafa.</p>
+        </div>
+        <a href="buku/mam-i-01/" class="btn btn-emerald btn-sm">Buka Halaman QR Buku MAM-I-01 ↗</a>
+      </div>
+
+      <div class="filter-bar" id="klasterBar">
+        <button class="filter-btn active" data-klaster="ALL">Semua (18 + 3 Eksklusif)</button>
+        <button class="filter-btn" data-klaster="EKS">3 Buku Eksklusif (Iqro, Imla, Juz 'Amma)</button>
+        <button class="filter-btn" data-klaster="KLA-01">KLA-01 Fiqih &amp; Ibadah</button>
+        <button class="filter-btn" data-klaster="KLA-02">KLA-02 Aqidah &amp; Tauhid</button>
+        <button class="filter-btn" data-klaster="KLA-03">KLA-03 Akhlaq, Adab &amp; Doa</button>
+        <button class="filter-btn" data-klaster="KLA-04">KLA-04 Al-Qur'an &amp; Tajwid</button>
+        <button class="filter-btn" data-klaster="KLA-05">KLA-05 B. Arab &amp; Khath</button>
+        <button class="filter-btn" data-klaster="KLA-06">KLA-06 Tarikh &amp; Sirah</button>
+      </div>
+
+      <div class="books-grid" id="booksGrid"></div>
+    </div>
+  </section>
+
+  <!-- SECTION C: SHORTS, LIVE GAME & LKS INTERAKTIF RAMAH ANAK -->
+  <section id="tonton" class="block alt-bg">
+    <div class="container">
+      <div class="sec-head">
+        <div>
+          <span class="sec-kicker">Hub QR Buku (/bab/mam-i-01-bab-02/) • Child-Safe Zero Ads</span>
+          <h2 class="sec-title">Tonton Animasi Shorts, Main Game &amp; LKS Digital</h2>
+          <p class="sec-sub">Terhubung langsung ke rute QR Code buku cetak, <strong>Game Jejak Kisah Kampung Al-Muttaqin (15 Misi Kebaikan)</strong>, kuis sentuh ramah anak, senandung lagu santri, dan matriks 100 poin.</p>
+        </div>
+      </div>
+
+      <div class="media-lks-grid">
+        <div class="panel-box">
+          <div class="shorts-mock">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;">
+              <span class="book-code-pill">SHORTS 9:16 • 30 DETIK • 30 FPS</span>
+              <span style="font-size:0.76rem;color:#A8D6BA;">youtube-nocookie.com • rel=0</span>
+            </div>
+            <h3 style="margin-top:10px;font-size:1.14rem;color:#FFF3C4;" id="epTitle">Episode 001: Yuk, Mengucapkan Salam!</h3>
+            <p style="font-size:0.83rem;color:#DCEEE4;margin-top:4px;" id="epDesc">
+              0–3s Hook (Zahra) → 3–12s Masalah (Al Qosam) → 12–23s Penjelasan (Abi) → 23–28s Penerapan → 28–30s Pesan Penutup.
+            </p>
+            <img src="assets/storyboard/MAM_EP001_SALAM_STRIP_V4.webp" alt="Storyboard 5 Panel Episode 001 Yuk Mengucapkan Salam" class="shorts-strip-img" loading="lazy" />
+            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;">
+              <button class="btn btn-gold btn-sm ep-switch" data-ep="ep1">Ep. 01: Adab Salam</button>
+              <button class="btn btn-emerald btn-sm ep-switch" data-ep="ep2">Ep. 02 (QR Bab 2): Wudhu</button>
+              <a href="bab/mam-i-01-bab-02/" class="btn btn-sky btn-sm">Buka Halaman QR Bab 2 ↗</a>
+            </div>
+          </div>
+
+          <div class="game-promo-box">
+            <span class="book-code-pill">GAME EDUKASI ANIMASI • V1 LIVE</span>
+            <h3 style="font-size:1.22rem;color:#FFF3C4;margin-top:8px;">Jejak Kisah Kampung Al-Muttaqin</h3>
+            <p style="font-size:0.86rem;color:#E6F5EC;margin:6px 0 14px;">
+              Selesaikan <strong>15 Misi Kebaikan</strong> bersama Al Qosam &amp; Kak Zahra di lingkungan Kampung Al-Muttaqin! Bisa langsung dimainkan di HP &amp; laptop tanpa instalasi.
+            </p>
+            <a href="https://ahmadizzuddinalqosam-bot.github.io/Game-Jejak-Kisah-Kampung-Al-Muttaqin/" target="_blank" rel="noopener" class="btn btn-gold" style="width:100%;">Mainkan Game Sekarang (15 Misi) ↗</a>
+          </div>
+        </div>
+
+        <!-- Right: 4 Tab Kid-Friendly LKS -->
+        <div class="panel-box">
+          <div class="lks-tabs">
+            <button class="lks-tab-btn active" data-pane="pane-wudhu">1. Kuis 6 Rukun Wudhu</button>
+            <button class="lks-tab-btn" data-pane="pane-islam">2. 5 Rukun Islam</button>
+            <button class="lks-tab-btn" data-pane="pane-lagu">3. Lagu &amp; Dalil Arab</button>
+            <button class="lks-tab-btn" data-pane="pane-skor">4. Skor 100 Poin</button>
+          </div>
+
+          <!-- Pane 1: Kuis 6 Rukun Wudhu -->
+          <div class="lks-pane active" id="pane-wudhu">
+            <p style="font-size:0.89rem;margin-bottom:10px;"><strong>LKS Bab 2 (MAM-I-01):</strong> Ketuk 6 Rukun Wudhu sesuai urutan Mazhab Syafi'i dari nomor 1 sampai 6!</p>
+            <div id="wudhuList"></div>
+            <div id="wudhuFeedback" style="margin-top:8px;font-weight:700;font-size:0.9rem;color:var(--brand-emerald-cover);"></div>
+            <div class="reward-banner" id="wudhuReward">★★★ MUMTAZ! ★★★<br/>Hebat! Kamu berhasil mengurutkan 6 Rukun Wudhu Mazhab Syafi'i dengan benar!</div>
+            <button class="btn btn-outline btn-sm" id="resetWudhu" style="margin-top:10px;">Ulangi Kuis Wudhu</button>
+          </div>
+
+          <!-- Pane 2: Tactile Tap-to-Order 5 Rukun Islam (NO boring dropdowns!) -->
+          <div class="lks-pane" id="pane-islam">
+            <p style="font-size:0.89rem;margin-bottom:10px;"><strong>LKS 5 Tiang Rukun Islam:</strong> Ketuk kartu Rukun Islam secara berurutan dari tiang ke-1 sampai ke-5!</p>
+            <div id="islamList"></div>
+            <div id="islamFeedback" style="margin-top:8px;font-weight:700;font-size:0.9rem;color:var(--brand-emerald-cover);"></div>
+            <div class="reward-banner" id="islamReward">★★★ MASYA ALLAH • 100 POIN! ★★★<br/>Semua 5 Tiang Rukun Islam berdiri kokoh di Kampung Al-Muttaqin!</div>
+            <button class="btn btn-outline btn-sm" id="resetIslam" style="margin-top:10px;">Ulangi 5 Rukun Islam</button>
+          </div>
+
+          <!-- Pane 3: Senandung Lagu Santri & Dalil Arab RTL (NO Latin!) -->
+          <div class="lks-pane" id="pane-lagu">
+            <div class="song-box">
+              <strong style="color:#125A3E;display:block;margin-bottom:4px;">Senandung Lagu Santri: 6 Rukun Wudhu (Nada: Balonku)</strong>
+              <p style="font-size:0.88rem;line-height:1.55;">
+                <em>Rukun wudhu ada enam, ayo kita hafalkan...<br/>
+                Pertama niat di hati, kedua basuh wajah...<br/>
+                Ketiga tangan ke siku, keempat usap kepala...<br/>
+                Kelima basuh kakinya, sampai ke mata kaki — keenam harus tertib!</em>
+              </p>
+            </div>
+            <div class="dalil-card">
+              <div style="font-size:0.75rem;font-weight:800;color:var(--brand-emerald-cover);margin-bottom:4px;">NIAT WUDHU (KHAT ARAB FULL HARAKAT • TANPA TRANSLITERASI LATIN)</div>
+              <div class="arabic-text" dir="rtl" lang="ar">نَوَيْتُ الْوُضُوْءَ لِرَفْعِ الْحَدَثِ الْأَصْغَرِ فَرْضًا لِلّٰهِ تَعَالَى</div>
+              <p class="serif-quote" style="font-style:italic;font-size:0.88rem;color:var(--text-muted);margin-top:4px;">
+                “Aku niat berwudhu untuk menghilangkan hadats kecil, fardhu karena Allah Ta'ala.”
+              </p>
+            </div>
+            <div class="dalil-card" style="margin-bottom:0;">
+              <div style="font-size:0.75rem;font-weight:800;color:var(--brand-emerald-cover);margin-bottom:4px;">SALAM SUNNAH KAMPUNG AL-MUTTAQIN</div>
+              <div class="arabic-text" dir="rtl" lang="ar">السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللّٰهِ وَبَرَكَاتُهُ</div>
+              <p class="serif-quote" style="font-style:italic;font-size:0.88rem;color:var(--text-muted);margin-top:4px;">
+                “Semoga keselamatan, rahmat Allah, dan keberkahan-Nya tercurah kepada kalian.”
+              </p>
+            </div>
+          </div>
+
+          <!-- Pane 4: Kalkulator 100 Poin Asatidz -->
+          <div class="lks-pane" id="pane-skor">
+            <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:10px;">Sistem Penilaian Aditif Murni Dewan Asatidz: <strong>Teori/LKS (20) + Tahfidz (35) + Praktik (30) + Adab (15) = 100 Poin</strong>.</p>
+            <div class="form-group">
+              <label>Nama Santri Cilik</label>
+              <input type="text" id="santriName" value="Al Qosam" />
+            </div>
+            <div class="calc-row"><label><span>1. Teori &amp; LKS (Maks 20)</span><strong id="vTeori">18</strong></label><input type="range" id="rTeori" min="0" max="20" value="18" /></div>
+            <div class="calc-row"><label><span>2. Tahfidz &amp; Hafalan (Maks 35)</span><strong id="vTahfidz">32</strong></label><input type="range" id="rTahfidz" min="0" max="35" value="32" /></div>
+            <div class="calc-row"><label><span>3. Praktik Ibadah (Maks 30)</span><strong id="vPraktik">27</strong></label><input type="range" id="rPraktik" min="0" max="30" value="27" /></div>
+            <div class="calc-row"><label><span>4. Adab &amp; Mutaba'ah (Maks 15)</span><strong id="vAdab">14</strong></label><input type="range" id="rAdab" min="0" max="15" value="14" /></div>
+            <div class="score-result">
+              <div>
+                <div style="font-size:0.76rem;color:#A8D6BA;">TOTAL NILAI SANTRI</div>
+                <div style="font-family:'Baloo 2',sans-serif;font-size:1.9rem;line-height:1;" id="totalScore">91 / 100</div>
+                <div style="font-size:0.84rem;color:#F6D365;font-weight:700;" id="predikatText">Predikat: MUMTAZ (Istimewa)</div>
+              </div>
+              <button class="btn btn-gold btn-sm" id="sendScoreWA">Kirim Laporan WA</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION D: 18 MERCHANDISE -->
+  <section id="merchandise" class="block">
+    <div class="container">
+      <div class="sec-head">
+        <div>
+          <span class="sec-kicker">Katalog Resmi V5 • 4 Klaster Starter Kit Santri</span>
+          <h2 class="sec-title">18 Merchandise Anak 3D Al Muttaqin Kids</h2>
+          <p class="sec-sub">Seluruh perlengkapan belajar dan ibadah anak mengikuti standar adab syar'i, memakai arsitektur <strong>LOC-01 Musholla Al-Muttaqin</strong>, dan langsung terhubung ke WhatsApp Pengurus.</p>
+        </div>
+      </div>
+
+            <div style="display:grid;grid-template-columns:1.05fr 0.95fr;gap:20px;align-items:center;background:var(--bg-card-ivory);border:2.5px solid var(--accent-gold-badge);border-radius:24px;padding:18px;margin-bottom:20px;box-shadow:var(--shadow-warm);">
+        <img src="assets/merch/MAM_MERCH_STARTERKIT_3D_V4.webp" alt="Showcase 3D Starter Kit Merchandise Al Muttaqin Kids sesuai Adab Syar'i" style="width:100%;border-radius:16px;display:block;object-fit:cover;" loading="lazy" />
+        <div>
+          <span class="book-code-pill">STARTER KIT SANTRI • 3D SHOWCASE</span>
+          <h3 style="color:var(--brand-emerald-deep);font-size:1.28rem;margin:8px 0 6px;">Paket Lengkap Perlengkapan Ngaji &amp; Ibadah Anak</h3>
+          <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:12px;">
+            Terdiri dari Tas Ransel Cordura Waterproof, Tote Bag Kanvas Krem-Hijau, Tumbler Al Qosam &amp; Kak Zahra, Sajadah Empuk motif mihrab geometris <strong>(bebas wajah di area sujud)</strong>, Peci Hijau Al Qosam, serta Buku A5 &amp; Kotak Pensil.
+          </p>
+          <a href="https://wa.me/6285171108518?text=Assalamu'alaikum%20Pengurus%20Majelis%20Ta'lim%20Al%20Muttaqin,%20saya%20tertarik%20memesan%20Starter%20Kit%20Merchandise%20Santri%20Al%20Muttaqin%20Kids." target="_blank" rel="noopener" class="btn btn-emerald btn-sm">Tanya Paket Starter Kit via WA</a>
+        </div>
+      </div>
+
+      <div class="adab-notice">
+        <strong>Ketetapan Adab Syar'i:</strong> Tidak ada ilustrasi wajah karakter pada area sujud sajadah anak maupun punggung pakaian sholat. Seluruh produk menampilkan Umi berhijab hijau muda dan Musholla Al-Muttaqin 1 lantai.
+      </div>
+
+      <div class="filter-bar" id="merchFilterBar">
+        <button class="filter-btn active" data-mkl="ALL">Semua 18 Produk</button>
+        <button class="filter-btn" data-mkl="K1">1. Ngaji &amp; Sekolah (5)</button>
+        <button class="filter-btn" data-mkl="K2">2. Adab Makan &amp; Minum (3)</button>
+        <button class="filter-btn" data-mkl="K3">3. Ibadah Praktis (4)</button>
+        <button class="filter-btn" data-mkl="K4">4. Edutainment &amp; Reward (6)</button>
+      </div>
+
+      <div class="merch-grid" id="merchGrid"></div>
+    </div>
+  </section>
+
+  <!-- SECTION E: JADWAL, BIAYA PENDIDIKAN & DEWAN ASATIDZ -->
+  <section id="asatidz" class="block alt-bg">
+    <div class="container">
+      <div class="sec-head">
+        <div>
+          <span class="sec-kicker">Info Majelis, Jadwal &amp; Otoritas Keilmuan</span>
+          <h2 class="sec-title">Jadwal Ngaji, Pembiayaan &amp; 9 Dewan Asatidz</h2>
+          <p class="sec-sub">Diselenggarakan di <strong>Musholla Al-Muttaqin</strong> (RT 05/RW 02 Rawa Buaya) dengan bimbingan Pembina &amp; 9 Anggota Dewan Asatidz bermanhaj Mazhab Syafi'i – Aswaja.</p>
+        </div>
+      </div>
+
+      <div class="schedule-grid">
+        <div class="sched-card">
+          <span class="book-code-pill">JADWAL NGAJI RUTIN</span>
+          <h3 style="color:var(--brand-emerald-deep);margin-top:8px;font-size:1.05rem;">Pembinaan Santri Cilik</h3>
+          <ul style="padding-left:18px;font-size:0.86rem;color:var(--text-muted);margin-top:6px;">
+            <li><strong>Senin – Kamis (Ba'da Maghrib):</strong> Iqro, Tahsin, Tahfidz Juz 'Amma &amp; Imla.</li>
+            <li><strong>Sabtu / Ahad Pagi:</strong> Praktik Wudhu &amp; Sholat (MAM-I-01), Kisah Teladan &amp; LKS Ceria.</li>
+          </ul>
+        </div>
+        <div class="sched-card" style="border-top-color:var(--accent-gold-badge);">
+          <span class="book-code-pill">INFAQ PENDIDIKAN TA 2026/2027</span>
+          <h3 style="color:var(--brand-emerald-deep);margin-top:8px;font-size:1.05rem;">Terjangkau &amp; Subsidi Yatim</h3>
+          <ul style="padding-left:18px;font-size:0.86rem;color:var(--text-muted);margin-top:6px;">
+            <li><strong>Syahriyah / SPP Bulanan:</strong> Rp50.000/bln (Tersedia <em>Diskon Bersaudara</em> &amp; <strong>Beasiswa Yatim/Dhuafa</strong>).</li>
+            <li><strong>Paket Kegiatan Tahunan (4 PHBI):</strong> Rp250.000/santri (Maulid, Sanlat, Rihlah &amp; Wisuda).</li>
+          </ul>
+        </div>
+        <div class="sched-card" style="border-top-color:var(--accent-sky-lks);">
+          <span class="book-code-pill">4 GERBANG QUALITY CONTROL</span>
+          <h3 style="color:var(--brand-emerald-deep);margin-top:8px;font-size:1.05rem;">Tashih Syar'i &amp; Canon</h3>
+          <ul style="padding-left:18px;font-size:0.86rem;color:var(--text-muted);margin-top:6px;">
+            <li><strong>Gate 1–2:</strong> Pentashihan Fiqih Syafi'i–Aswaja &amp; Kunci Canon Visual V4.1.</li>
+            <li><strong>Gate 3–4:</strong> Uji pedagogi usia 4–12 thn, sistem QR Code &amp; pengesahan Pembina.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="background:var(--brand-emerald-deep);color:#FFFFFF;border-radius:20px;padding:18px 22px;border:2px solid var(--accent-gold-badge);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px;">
+        <div>
+          <span style="font-size:0.78rem;color:#F6D365;font-weight:700;letter-spacing:0.6px;">PEMBINA &amp; PENGASUH MAJELIS TA'LIM AL MUTTAQIN</span>
+          <h3 style="font-size:1.22rem;margin-top:2px;">Bapak Zainal Arifin &amp; Ibu Kasih Nursyaibah</h3>
+        </div>
+        <span style="background:rgba(255,255,255,0.14);padding:8px 16px;border-radius:999px;font-size:0.83rem;font-weight:700;">Manhaj: Mazhab Syafi'i – Ahlussunnah wal Jama'ah</span>
+      </div>
+
+      <div class="asatidz-grid" id="asatidzGrid"></div>
+    </div>
+  </section>
+
+  <!-- SECTION F: TRANSPARANSI KAS & SAHABAT JARIYAH (T-39 — NO FAKE DUMMY QRIS!) -->
+  <section id="sahabat-jariyah" class="block">
+    <div class="container">
+      <div class="sec-head">
+        <div>
+          <span class="sec-kicker">Program Donatur Tetap (T-39) &amp; Transparansi Kas TA 2026/2027</span>
+          <h2 class="sec-title">Sahabat Jariyah &amp; Laporan Kas Transparan</h2>
+          <p class="sec-sub">Dikelola dengan prinsip <strong>Pemisahan Dana Akad</strong> (Pendidikan vs Kemakmuran Musholla vs ZISWAF 8 Asnaf) dan <strong>Otorisasi Ganda (Maker-Checker)</strong> di atas Rp500.000.</p>
+        </div>
+      </div>
+
+      <!-- Real Dashboard KPI from Master Sistem Manajemen Keuangan Terpadu TA 2026/2027 -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div style="font-size:0.74rem;font-weight:800;color:var(--text-muted);">KAS MASUK BKU (TA 26/27)</div>
+          <div class="kpi-val">Rp6.850.000</div>
+          <div style="font-size:0.76rem;color:var(--text-muted);">Realisasi Masuk Operasional</div>
+        </div>
+        <div class="kpi-card">
+          <div style="font-size:0.74rem;font-weight:800;color:var(--text-muted);">SALDO KAS BERSIH BKU</div>
+          <div class="kpi-val">Rp2.450.000</div>
+          <div style="font-size:0.76rem;color:var(--text-muted);">Kas Keluar: Rp4.400.000</div>
+        </div>
+        <div class="kpi-card" style="border-color:var(--accent-gold-badge);background:var(--bg-story-mint);">
+          <div style="font-size:0.74rem;font-weight:800;color:var(--brand-emerald-deep);">SALDO ZISWAF &amp; WAKAF</div>
+          <div class="kpi-val">Rp8.025.000</div>
+          <div style="font-size:0.76rem;color:var(--text-muted);">Tromol, Wakaf Modul &amp; Zakat</div>
+        </div>
+        <div class="kpi-card">
+          <div style="font-size:0.74rem;font-weight:800;color:var(--text-muted);">PENYALURAN NYATA NOV 26</div>
+          <div class="kpi-val">Rp2.250.000</div>
+          <div style="font-size:0.76rem;color:var(--text-muted);">10 Mushaf Utsmani &amp; 10 Yatim RT 05</div>
+        </div>
+      </div>
+
+      <div class="jariyah-grid">
+        <div>
+          <div class="paket-grid" id="paketGrid">
+            <div class="paket-card selected" data-paket="Paket Muhsinin (Rp50.000/bln)">
+              <span class="book-code-pill">T-39 • PAKET 1</span>
+              <h3 style="margin-top:8px;color:var(--brand-emerald-deep);">Paket Muhsinin</h3>
+              <div class="paket-price">Rp50.000 <small style="font-size:0.8rem;color:var(--text-muted);">/ bln</small></div>
+              <p style="font-size:0.83rem;color:var(--text-muted);margin-top:4px;">Air wudhu, listrik harian Musholla Al-Muttaqin &amp; alat tulis santri. Laporan kas bulanan via WA.</p>
+            </div>
+            <div class="paket-card" data-paket="Paket Muttaqin (Rp100.000/bln)">
+              <span class="book-code-pill">T-39 • PAKET 2</span>
+              <h3 style="margin-top:8px;color:var(--brand-emerald-deep);">Paket Muttaqin</h3>
+              <div class="paket-price">Rp100.000 <small style="font-size:0.8rem;color:var(--text-muted);">/ bln</small></div>
+              <p style="font-size:0.83rem;color:var(--text-muted);margin-top:4px;">Bisyaroh asatidz &amp; subsidi Buku Modul A5 Full Color. Apresiasi Buku Saku Doa Harian.</p>
+            </div>
+            <div class="paket-card" data-paket="Paket Kafalah Ilmu (Rp250.000/bln)">
+              <span class="book-code-pill">T-39 • PAKET 3</span>
+              <h3 style="margin-top:8px;color:var(--brand-emerald-deep);">Paket Kafalah Ilmu</h3>
+              <div class="paket-price">Rp250.000 <small style="font-size:0.8rem;color:var(--text-muted);">/ bln</small></div>
+              <p style="font-size:0.83rem;color:var(--text-muted);margin-top:4px;">Pendidikan penuh &amp; paket modul A5 untuk 2 santri yatim/dhuafa. Apresiasi Souvenir Resmi.</p>
+            </div>
+            <div class="paket-card" data-paket="Paket Jariyah Mandiri (Nominal Bebas)">
+              <span class="book-code-pill">T-39 • PAKET 4</span>
+              <h3 style="margin-top:8px;color:var(--brand-emerald-deep);">Jariyah Mandiri</h3>
+              <div class="paket-price">Nominal Bebas</div>
+              <p style="font-size:0.83rem;color:var(--text-muted);margin-top:4px;">Dialokasikan sesuai akad donatur (Wakaf Buku A5, ZISWAF, atau Kemakmuran Musholla).</p>
+            </div>
+          </div>
+
+          <div class="panel-box" style="margin-top:18px;">
+            <h3 style="color:var(--brand-emerald-deep);margin-bottom:10px;">Formulir Pendaftaran Santri / Komitmen Sahabat Jariyah</h3>
+            <div class="form-group">
+              <label>Jenis Layanan</label>
+              <select id="waJenis">
+                <option value="Komitmen Sahabat Jariyah (T-39)">Komitmen Donatur Sahabat Jariyah (T-39)</option>
+                <option value="Pendaftaran Santri Baru Al Muttaqin Kids">Pendaftaran Santri Baru Al Muttaqin Kids</option>
+                <option value="Pemesanan Paket 6 Buku A5 Batch 1 (Rp180.000)">Pemesanan Paket 6 Buku A5 Batch 1 (Rp180.000)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Nama Wali / Donatur</label>
+              <input type="text" id="waNama" placeholder="Nama lengkap Bapak/Ibu" />
+            </div>
+            <div class="form-group">
+              <label>Keterangan / Paket Dipilih</label>
+              <input type="text" id="waKet" value="Paket Muhsinin (Rp50.000/bln)" />
+            </div>
+            <button class="btn btn-emerald" id="submitWA" style="width:100%;">Kirim Konfirmasi ke WhatsApp Pengurus (0851-7110-8518)</button>
+          </div>
+        </div>
+
+        <!-- Safe Verified Payment Channels Card (No fake non-scannable dummy QRIS!) -->
+        <div class="panel-box">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
+            <img src="assets/logo/LOGO_AL_MUTTAQIN_MASTER_RESOLUSI_2000PX_TRANSPARAN.png" alt="Logo Majelis Ta'lim Al Muttaqin" style="width:52px;height:52px;object-fit:contain;" />
+            <div>
+              <span class="book-code-pill">KANAL RESMI TERVERIFIKASI</span>
+              <h3 style="color:var(--brand-emerald-deep);font-size:1.05rem;margin-top:3px;">Penyaluran Infaq, Wakaf &amp; SPP</h3>
+            </div>
+          </div>
+          <div style="background:#FFFFFF;border:1.5px solid #DFD2B6;border-radius:16px;padding:14px;margin-bottom:12px;font-size:0.86rem;">
+            <strong style="color:var(--brand-emerald-deep);display:block;margin-bottom:6px;">4 Kanal Pencatatan Satu Pintu (BKU Resmi):</strong>
+            <ul style="padding-left:18px;line-height:1.65;color:var(--text-charcoal);">
+              <li><strong>Transfer Bank Syariah Indonesia (BYOND by BSI)</strong> — Nomor rekening resmi dikirim langsung oleh Bendahara via WhatsApp untuk keamanan transaksi.</li>
+              <li><strong>QRIS Resmi Musholla Al-Muttaqin</strong> — Tersedia di mading Musholla &amp; melalui permintaan langsung ke Bendahara.</li>
+              <li><strong>E-Wallet Terverifikasi</strong> (GoPay / DANA / ShopeePay Pengurus).</li>
+              <li><strong>Kas Tunai Sekretariat</strong> — Jl. H. Djairi No. 171 RT 05/RW 02 Rawa Buaya (menerbitkan Nomor Bukti BKT resmi).</li>
+            </ul>
+          </div>
+          <div style="background:var(--bg-story-mint);border:1.5px solid var(--accent-soft-green);border-radius:14px;padding:12px;font-size:0.82rem;color:var(--brand-emerald-deep);">
+            <strong>Verifikator Keuangan &amp; Syariah:</strong><br/>
+            Bendahara: <em>Yoga Indrawan, S.M.</em> • Ketua: <em>Ahmad Izzuddin Al Qosam, S.H.</em> • Dewan Syariah ZISWAF: <em>Muhammad Rizki Aditia, Lc.</em>
+          </div>
+          <a href="https://wa.me/6285171108518?text=Assalamu'alaikum%20Bendahara%20Majelis%20Ta'lim%20Al%20Muttaqin,%20mohon%20kirimkan%20QRIS%20%2F%20No.%20Rekening%20BSI%20resmi%20untuk%20Sahabat%20Jariyah." target="_blank" rel="noopener" class="btn btn-gold" style="width:100%;margin-top:14px;">Minta QRIS / Rekening BSI Resmi via WA</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZONA 3: FOOTER OTORITAS -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="assets/logo/LOGO_AL_MUTTAQIN_MASTER_RESOLUSI_2000PX_PUTIH.png" alt="Logo Resmi Putih Majelis Ta'lim Al Muttaqin" />
+            <div>
+              <h3 style="font-size:1.18rem;color:#FFFFFF;">Majelis Ta'lim Al Muttaqin</h3>
+              <div style="font-size:0.84rem;color:#F6D365;font-weight:700;">“Membangun Generasi Cinta Al-Qur'an”</div>
+              <div style="font-size:0.78rem;color:#A8D6BA;">Biro Publikasi &amp; Kurikulum Media Pembelajaran — Majelis Al-Muttaqin Press</div>
+            </div>
+          </div>
+          <p style="font-size:0.84rem;color:#D6EAE0;">
+            Portal <strong>Al Muttaqin Kids (Kisah Al-Muttaqin)</strong> tunduk pada Canon Lock V1.2, Master Visual Bible V4.1, dan Manhaj Mazhab Syafi'i – Aswaja. Bebas iklan pihak ketiga (Child-Safe Web).
+          </p>
+        </div>
+
+        <div>
+          <h4 style="color:#F6D365;margin-bottom:8px;">Sekretariat &amp; Kontak Resmi</h4>
+          <p style="font-size:0.85rem;color:#E6F5EC;line-height:1.6;">
+            Jl. H. Djairi, RT 05/RW 02, No. 171,<br/>
+            Rawa Buaya, Cengkareng, Jakarta Barat 11740<br/>
+            Email: <strong>mushollahalmuttaqin05@gmail.com</strong><br/>
+            WhatsApp Pengurus: <strong>0851-7110-8518</strong>
+          </p>
+        </div>
+
+        <div>
+          <h4 style="color:#F6D365;margin-bottom:8px;">Ekosistem 5 Pilar Majelis (Klik Info)</h4>
+          <p style="font-size:0.82rem;color:#D6EAE0;">Seluruh cabang pembinaan jamaah di bawah payung induk Majelis Ta'lim Al Muttaqin:</p>
+          <div class="pillar-pills" id="pillarPills">
+            <button class="pillar-btn active-pillar" data-p="kids">1. Al Muttaqin Kids</button>
+            <button class="pillar-btn" data-p="brothers">2. Al Muttaqin Brothers</button>
+            <button class="pillar-btn" data-p="sisters">3. Al Muttaqin Sisters</button>
+            <button class="pillar-btn" data-p="mothers">4. Al Muttaqin Mothers</button>
+            <button class="pillar-btn" data-p="fathers">5. Al Muttaqin Fathers</button>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;font-size:0.8rem;color:#A8D6BA;padding-top:18px;">
+        &copy; 2026/2027 Majelis Ta'lim Al Muttaqin • Al Muttaqin Kids Portal v6.0 Complete Canon Edition • GitHub Pages Ready
+      </div>
+    </div>
+  </footer>
+
+  <!-- UNIVERSAL DETAIL MODAL -->
+  <div class="modal-backdrop" id="infoModal">
+    <div class="modal-box">
+      <button class="modal-close" id="closeModal" aria-label="Tutup">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script>
+    const WA_PHONE = "6285171108518";
+    const ASSETS = {
+      logoBlack: "assets/logo/LOGO_AL_MUTTAQIN_MASTER_RESOLUSI_2000PX_TRANSPARAN.png",
+      loc01: "assets/locations/MAM_LOC01_MUSHOLLA_EXTFRONT_V4.webp", loc01Int: "assets/locations/MAM_LOC01_MUSHOLLA_INT_V4.webp",
+      loc02: "assets/locations/MAM_LOC02_RUMAHALQOSAM_EXTFRONT_V4.webp", loc02Int: "assets/locations/MAM_LOC02_RUANGKELUARGA_V4.webp",
+      loc03: "assets/locations/MAM_LOC03_SDISLAM_EXTFRONT_V4.webp", loc03Int: "assets/locations/MAM_LOC03_KELAS_V4.webp",
+      loc04: "assets/locations/MAM_LOC04_RUANGBELAJAR_V4.webp", loc05: "assets/locations/MAM_LOC05_TAMANKAMPUNG_V4.webp", loc06: "assets/locations/MAM_LOC06_PASARWARUNG_V4.webp",
+      cov01: "assets/covers/MAM_COV_MAMI01_V6.webp", cov02: "assets/covers/MAM_COV_MAMI02_V6.webp", cov03: "assets/covers/MAM_COV_MAMI03_V6.webp",
+      cov04: "assets/covers/MAM_COV_MAMI04_V6.webp", cov05: "assets/covers/MAM_COV_MAMI05_V6.webp", cov06: "assets/covers/MAM_COV_MAMI06_V6.webp",
+      cov07: "assets/covers/MAM_COV_MAMI07_V6.webp", cov08: "assets/covers/MAM_COV_MAMI08_V6.webp", cov09: "assets/covers/MAM_COV_MAMI09_V6.webp",
+      cov10: "assets/covers/MAM_COV_MAMI10_V6.webp", cov11: "assets/covers/MAM_COV_MAMI11_V6.webp", cov12: "assets/covers/MAM_COV_MAMI12_V6.webp",
+      cov13: "assets/covers/MAM_COV_MAMI13_V6.webp", cov14: "assets/covers/MAM_COV_MAMI14_V6.webp", cov15: "assets/covers/MAM_COV_MAMI15_V6.webp",
+      cov16: "assets/covers/MAM_COV_MAMI16_V6.webp", cov17: "assets/covers/MAM_COV_MAMI17_V6.webp", cov18: "assets/covers/MAM_COV_MAMI18_V6.webp",
+      covIqro: "assets/covers/MAM_COV_IQRO_V6.webp", covImla: "assets/covers/MAM_COV_IMLA_V6.webp", covJuz: "assets/covers/MAM_COV_JUZAMMA_V6.webp",
+      m01: "assets/merch/MAM_MERCH_01_V6.webp", m02: "assets/merch/MAM_MERCH_02_V6.webp", m03: "assets/merch/MAM_MERCH_03_V6.webp",
+      m04: "assets/merch/MAM_MERCH_04_V6.webp", m05: "assets/merch/MAM_MERCH_05_V6.webp", m06: "assets/merch/MAM_MERCH_06_V6.webp",
+      m07: "assets/merch/MAM_MERCH_07_V6.webp", m08: "assets/merch/MAM_MERCH_08_V6.webp", m09: "assets/merch/MAM_MERCH_09_V6.webp",
+      m10: "assets/merch/MAM_MERCH_10_V6.webp", m11: "assets/merch/MAM_MERCH_11_V6.webp", m12: "assets/merch/MAM_MERCH_12_V6.webp",
+      m13: "assets/merch/MAM_MERCH_13_V6.webp", m14: "assets/merch/MAM_MERCH_14_V6.webp", m15: "assets/merch/MAM_MERCH_15_V6.webp",
+      m16: "assets/merch/MAM_MERCH_16_V6.webp", m17: "assets/merch/MAM_MERCH_17_V6.webp", m18: "assets/merch/MAM_MERCH_18_V6.webp"
+    };
+
+    // Mobile Nav
+    document.getElementById("mobileToggle").addEventListener("click", () => {
+      document.getElementById("navLinks").classList.toggle("open");
+    });
+
+    // 6 LOCATIONS + SUB-ROOM GALLERY (100% REAL ASSETS UTILIZED, ZERO STAMPS)
+    const LOCATIONS = [
+      { id: "LOC-01", name: "Musholla Al-Muttaqin", tag: "LOC-01 • LOKASI IBADAH UTAMA", views: [{ label: "Tampak Depan (1 Lt)", img: ASSETS.loc01 }, { label: "Interior Ruang Sholat & Wudhu", img: ASSETS.loc01Int }], desc: "Pusat ibadah, kajian, belajar Al-Qur'an, dan pembinaan santri cilik dengan arsitektur 1 lantai beratap limasan/tajug tropis berkubah kecil.", rooms: ["Ruang Sholat", "Sudut Kajian", "Area Wudhu", "Teras & Halaman"] },
+      { id: "LOC-02", name: "Rumah Al Qosam", tag: "LOC-02 • HUNIAN KELUARGA", views: [{ label: "Fasad Rumah", img: ASSETS.loc02 }, { label: "Interior Ruang Keluarga", img: ASSETS.loc02Int }], desc: "Tempat tinggal Al Qosam, Kak Zahra, Abi, dan Umi (hijab hijau muda). Pusat kisah keseharian keluarga dan pembiasaan adab rumah.", rooms: ["Teras & Ruang Tamu", "Ruang Keluarga", "Ruang Makan & Dapur", "Kamar Anak"] },
+      { id: "LOC-03", name: "SD Islam Al-Muttaqin", tag: "LOC-03 • PENDIDIKAN FORMAL", views: [{ label: "Fasad Sekolah", img: ASSETS.loc03 }, { label: "Interior Kelas 4A", img: ASSETS.loc03Int }], desc: "Sekolah dasar Islami tempat Al Qosam dan Kak Zahra menuntut ilmu, membaca di perpustakaan, dan berteman dengan akhlak mulia.", rooms: ["Ruang Kelas 4A", "Perpustakaan", "Kantin Sehat", "Halaman & UKS"] },
+      { id: "LOC-04", name: "Ruang Belajar Islam", tag: "LOC-04 • LITERASI & KAJIAN", views: [{ label: "Interior Ruang Baca", img: ASSETS.loc04 }], desc: "Ruang edukasi khusus penjelasan materi buku ISO A5, hafalan Juz 'Amma, dan diskusi interaktif bersama Dewan Asatidz.", rooms: ["Rak Buku A5", "Area Baca", "Papan Edukasi", "Pojok Diskusi"] },
+      { id: "LOC-05", name: "Taman Kampung", tag: "LOC-05 • REKREASI & ALAM", views: [{ label: "Area Bermain & Gazebo", img: ASSETS.loc05 }], desc: "Area bermain anak, gazebo santai, olahraga ringan, serta pembelajaran menjaga kebersihan dan kelestarian lingkungan.", rooms: ["Area Bermain", "Gazebo Kampung", "Jalur Taman", "Tempat Sampah Pilah"] },
+      { id: "LOC-06", name: "Pasar & Warung Kampung", tag: "LOC-06 • INTERAKSI SOSIAL", views: [{ label: "Kios Pasar & Warung Sehat", img: ASSETS.loc06 }], desc: "Pusat interaksi masyarakat, belajar menyapa tetangga, adab jual-beli jujur, dan tolong-menolong di Kampung Al-Muttaqin.", rooms: ["Kios Pasar", "Warung Sehat", "Gang Melati RT 05"] }
+    ];
+
+    const locThumbs = document.getElementById("locThumbs");
+    function selectLocation(idx, viewIdx = 0) {
+      const loc = LOCATIONS[idx];
+      const v = loc.views[viewIdx] || loc.views[0];
+      document.getElementById("locPhoto").src = v.img;
+      document.getElementById("locPhoto").alt = loc.name + " - " + v.label;
+      document.getElementById("locCode").textContent = loc.tag;
+      document.getElementById("locName").textContent = loc.name;
+      document.getElementById("locDesc").textContent = loc.desc;
+      document.getElementById("locRooms").innerHTML = loc.rooms.map(r => `<span>${r}</span>`).join("");
+      const sw = document.getElementById("locViewSwitch");
+      sw.innerHTML = loc.views.length > 1
+        ? loc.views.map((vw, vi) => `<button class="loc-view-btn ${vi===viewIdx?'active':''}" onclick="selectLocation(${idx},${vi})">${vw.label}</button>`).join("")
+        : "";
+      document.querySelectorAll(".map-hotspot").forEach((p, i) => p.classList.toggle("active", i === idx));
+      document.querySelectorAll(".loc-mini-btn").forEach((b, i) => b.classList.toggle("active", i === idx));
+    }
+    window.selectLocation = selectLocation;
+
+    LOCATIONS.forEach((loc, idx) => {
+      const btn = document.createElement("button");
+      btn.className = "loc-mini-btn" + (idx === 0 ? " active" : "");
+      btn.innerHTML = `<img src="${loc.views[0].img}" alt="${loc.name}" loading="lazy"/><strong>${idx+1}. ${loc.name}</strong>`;
+      btn.addEventListener("click", () => selectLocation(idx, 0));
+      locThumbs.appendChild(btn);
+    });
+    document.querySelectorAll(".map-hotspot").forEach(p => {
+      p.addEventListener("click", () => selectLocation(Number(p.dataset.loc), 0));
+    });
+    selectLocation(0, 0);
+
+    // CINEMATIC 4-TIME ATMOSPHERE SWITCHER
+    const ATMO_TEXT = {
+      pagi: "Atmosfer: Pagi (Hangat & Cerah)",
+      siang: "Atmosfer: Siang (Aktif & Ceria)",
+      sore: "Atmosfer: Sore (Senja Tenang & Hangat)",
+      malam: "Atmosfer: Malam (Asri, Teduh & Lampu Musholla)"
+    };
+    document.querySelectorAll(".atmo-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".atmo-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        const mode = btn.dataset.atmo;
+        document.getElementById("mapFrame").className = "map-frame atmo-" + mode;
+        document.getElementById("atmoLabel").textContent = ATMO_TEXT[mode];
+      });
+    });
+
+    // 18 BUKU A5 + 3 BUKU EKSKLUSIF (100% SYNCED WITH DRIVE COVERS, 7 BAB & 6 TAHAP!)
+    const BOOKS = [
+      { no: "01", eks: false, title: "Fiqih Ibadah Praktis", kl: "KLA-01", klName: "Fiqih & Ibadah", price: "Rp35.000", pages: "74 Hal", status: "SELESAI 100%", stClass: "st-done", cov: ASSETS.cov01, kitab: "Safinatun Naja, Matan Abi Syuja', Fathul Qarib (Mazhab Syafi'i)", awas: "Jangan tergesa berwudhu sampai tumit masih kering! Dalam Mazhab Syafi'i, tumit wajib terbasuh rata hingga mata kaki.", babs: ["Bab 1: Islam & Syahadatain (5 Rukun Islam)", "Bab 2: Thaharah, 7 Air Mutlaq & 6 Rukun Wudhu", "Bab 3: Shalat Lima Waktu & 17 Rukun Sholat", "Bab 4: Puasa Ramadhan", "Bab 5: Zakat Fitrah (2,5 Kg)", "Bab 6: Haji (Pengenalan 6 Rukun Haji)", "Bab 7: Doa, Dzikir & Adab Ibadah"] },
+      { no: "02", eks: false, title: "Tajwid Ceria", kl: "KLA-04", klName: "Al-Qur'an & Tajwid", price: "Rp30.000", pages: "64 Hal", status: "Cover Final & Naskah", stClass: "st-done", cov: ASSETS.cov02, kitab: "Tuhfatul Athfal, Muqaddimah Jazariyyah & Rasm Utsmani", awas: "Hati-hati Lahn Jali (kesalahan harakat/huruf) seperti menukar huruf 'Ain (ع) dengan Hamzah (أ) saat membaca Al-Fatihah!", babs: ["Bab 1: Pengantar Tajwid & Adab", "Bab 2: Mengenal Lahn (Jali & Khafi)", "Bab 3: Huruf Hijaiyah & Harakat", "Bab 4: Makharijul & Sifat Huruf", "Bab 5: Hukum Nun & Mim Sukun", "Bab 6: Bacaan Panjang (Mad)", "Bab 7: Waqaf & Sambung Huruf (28 LKS)"] },
+      { no: "03", eks: false, title: "Aqidah & Tauhid Ceria", kl: "KLA-02", klName: "Aqidah & Tauhid", price: "Rp30.000", pages: "56 Hal", status: "Cover Final • Batch 1", stClass: "st-done", cov: ASSETS.cov03, kitab: "Aqidatul Awam, Tijan Ad-Darori (Asy'ariyah–Maturidiyah)", awas: "Jangan menyamakan sifat Allah dengan makhluk-Nya (Mukhalafatu lil Hawaditsi).", babs: ["Bab 1: Enam Rukun Iman & Tauhid", "Bab 2: Mengenal Allah & 20 Sifat Wajib Allah", "Bab 3: Iman kepada 10 Malaikat", "Bab 4: Empat Kitab Suci Allah", "Bab 5: Kisah 25 Nabi & Rasul", "Bab 6: Iman Hari Akhir (Kiamat)", "Bab 7: Qadha, Qadar & Tawakkal"] },
+      { no: "04", eks: false, title: "Akhlaq Mulia", kl: "KLA-03", klName: "Akhlaq, Adab & Doa", price: "Rp30.000", pages: "60 Hal", status: "Cover Final • Batch 1", stClass: "st-done", cov: ASSETS.cov04, kitab: "Al-Akhlaq lil Banin/Banat, Ta'limul Muta'allim & Al-Adzkar", awas: "Membantah Abi & Umi atau mengejek teman dapat mengurangi keberkahan ilmu.", babs: ["Bab 1: Adab kepada Allah & Rasul", "Bab 2: Bakti kepada Abi & Umi (Birrul Walidain)", "Bab 3: Adab Guru, Kitab & Majelis", "Bab 4: Adab Teman & Lingkungan", "Bab 5: Doa Aktivitas di Rumah (17 Doa Harian)", "Bab 6: Doa Masjid & Belajar", "Bab 7: 15 Hadits Pendek Pilihan Berharakat"] },
+      { no: "05", eks: false, title: "Tarikh Ceria", kl: "KLA-06", klName: "Tarikh & Sirah", price: "Rp30.000", pages: "52 Hal", status: "Cover Final • Batch 1", stClass: "st-done", cov: ASSETS.cov05, kitab: "Khulashoh Nurul Yaqin & Ar-Rahiq Al-Makhtum", awas: "Dilarang menggambar wajah Nabi Muhammad SAW maupun para Nabi & Malaikat dalam karya apapun.", babs: ["Bab 1: Kisah Teladan 25 Nabi & Rasul", "Bab 2: Lima Rasul Ulul Azmi", "Bab 3: Kelahiran & Masa Kecil Nabi SAW", "Bab 4: Gelar Al-Amin & Dakwah Nabi", "Bab 5: Keluarga & Putra-Putri Nabi SAW", "Bab 6: Hijrah, Madinah & Wafatnya Nabi", "Bab 7: 12 Bulan Hijriyah & Lagu Rasul"] },
+      { no: "06", eks: false, title: "Buku Kerja Anak Shalih", kl: "KLA-04", klName: "Al-Qur'an & Mutaba'ah", price: "Rp25.000", pages: "72 Hal", status: "Cover Final • Batch 1", stClass: "st-done", cov: ASSETS.cov06, kitab: "Standar Rasm Utsmani, Metode Iqro & Matriks 100 Poin", awas: "Isi ceklis sholat 5 waktu dengan jujur ya! Allah Maha Melihat (Al-Bashir).", babs: ["Bab 1: Pengantar Tahsin, Tahfidz & Khath", "Bab 2: Khath Basmalah 7x & Al-Fatihah", "Bab 3: Khath Menyambung Huruf Hijaiyah", "Bab 4: Juz 'Amma: Ad-Dhuha s/d Al-Adiyat", "Bab 5: Juz 'Amma: Al-Qari'ah s/d Al-Kafirun", "Bab 6: Juz 'Amma: An-Nashr s/d An-Nas", "Bab 7: Checklist Iqro 1–6 & Syahadah"] },
+      { no: "IQRO 1-6", eks: true, title: "Iqro Eksklusif Al-Muttaqin", kl: "EKS", klName: "Seri Eksklusif Pendamping", price: "Edisi Khusus", pages: "40 Hal", status: "SELESAI 100% (A5)", stClass: "st-done", cov: ASSETS.covIqro, kitab: "Qira'ah Imam 'Ashim Riwayat Hafsh • Khat 20–36 pt", awas: "Kenali perbedaan makhraj huruf yang mirip seperti س (Sin), ش (Syin), dan ص (Shad) tanpa bergantung transliterasi Latin.", babs: ["Tahap 1: 29 Huruf Tunggal & Harakat Fathah", "Tahap 2: Kasrah, Dhammah & Mad Thabi'i", "Tahap 3: Tanwin, Sukun & Qalqalah", "Tahap 4: Tasydid, Ghunnah & Mad Far'i", "Tahap 5: Nun/Mim Sukun & Rambu Waqaf", "Tahap 6: Gharib, Surah & Syahadah"] },
+      { no: "IMLA 1-6", eks: true, title: "Imla & Menulis Arab Eksklusif", kl: "EKS", klName: "Seri Eksklusif Pendamping", price: "Edisi Khusus", pages: "52 Hal", status: "SELESAI 100% (A5)", stClass: "st-done", cov: ASSETS.covImla, kitab: "Kaidah Khath Naskhi Super Besar 22–32 pt • +12 Hal Latihan", awas: "Ingat 6 huruf yang tidak bisa disambung ke kiri: ا د ذ ر ز و!", babs: ["Tahap 1: 29 Huruf Fathah & Angka Arab 1–10", "Tahap 2: Harakat Dasar & Sambung Huruf", "Tahap 3: Tanwin, Sukun & Qalqalah", "Tahap 4: Tasydid, Ghunnah & Alif Lam", "Tahap 5: Nun/Mim Sukun & Rambu Waqaf", "Tahap 6: Salin Surah, Doa & Ujian Imla"] },
+      { no: "JUZ 30", eks: true, title: "Juz 'Amma Eksklusif", kl: "EKS", klName: "Seri Eksklusif Pendamping", price: "Edisi Khusus", pages: "56 Hal", status: "SELESAI 100% (A5)", stClass: "st-done", cov: ASSETS.covJuz, kitab: "Qira'ah Imam 'Ashim Riwayat Hafsh • Khat 20–24 pt Spasi 1,62x", awas: "Fokus membaca huruf Arab 20–24 pt langsung tanpa transliterasi Latin; perhatikan kasrah di bawah huruf bertasydid.", babs: ["Tahap 1: Al-Fatihah & An-Nas s.d. Al-Kafirun", "Tahap 2: Al-Kautsar s.d. At-Takatsur", "Tahap 3: Al-Qari'ah s.d. Al-'Alaq", "Tahap 4: At-Tin s.d. Al-Balad", "Tahap 5: Al-Fajr s.d. Al-Buruj", "Tahap 6: Al-Insyiqaq s.d. An-Naba' (+ 6 Tashih & Syahadah)"] },
+      { no: "07", eks: false, title: "Al-Qur'an Harian (Juz 'Amma)", kl: "KLA-04", klName: "Al-Qur'an & Tajwid", price: "Batch 2", pages: "ISO A5", status: "Roadmap 2027", stClass: "st-road", cov: ASSETS.cov07, kitab: "Mushaf Standar Madinah", awas: "Jaga adab memegang mushaf dalam keadaan suci/berwudhu.", babs: ["Fokus hafalan & tadabbur ringan ayat harian bersama Keluarga Al-Muttaqin."] },
+      { no: "08", eks: false, title: "Doa & Dzikir Sehari-hari", kl: "KLA-03", klName: "Akhlaq, Adab & Doa", price: "Batch 2", pages: "ISO A5", status: "Roadmap 2027", stClass: "st-road", cov: ASSETS.cov08, kitab: "Al-Adzkar An-Nawawiyah", awas: "Biasakan berdoa sebelum makan, tidur, dan keluar rumah.", babs: ["Buku saku tipis 17 doa aktivitas harian & dzikir pagi-petang anak."] },
+      { no: "09", eks: false, title: "Sirah Nabawi", kl: "KLA-06", klName: "Tarikh & Sirah", price: "Batch 2", pages: "ISO A5", status: "Roadmap 2027", stClass: "st-road", cov: ASSETS.cov09, kitab: "Ar-Rahiq Al-Makhtum", awas: "Bedakan kisah sejarah shahih dengan cerita rakyat fiktif.", babs: ["Perjalanan dakwah Rasulullah SAW periode Makkah & Madinah."] },
+      { no: "10", eks: false, title: "Adab Sehari-hari", kl: "KLA-03", klName: "Akhlaq, Adab & Doa", price: "Batch 2", pages: "ISO A5", status: "Roadmap 2027", stClass: "st-road", cov: ASSETS.cov10, kitab: "Al-Akhlaq lil Banin/Banat", awas: "Masuk Musholla dahulukan kaki kanan sambil berdoa.", babs: ["Adab makan, minum, bertamu, berbicara, & di Musholla Al-Muttaqin."] },
+      { no: "11", eks: false, title: "Cinta Lingkungan", kl: "KLA-03", klName: "Akhlaq, Adab & Doa", price: "Batch 2", pages: "ISO A5", status: "Roadmap 2027", stClass: "st-road", cov: ASSETS.cov11, kitab: "Integrasi Hadits Kebersihan & Taman Kampung", awas: "Jangan boros air saat wudhu dan jangan membuang sampah sembarangan.", babs: ["Hemat air wudhu, pilah sampah di Taman Kampung & merawat tanaman."] },
+      { no: "12", eks: false, title: "Literasi Islam", kl: "KLA-05", klName: "B. Arab & Khath", price: "Batch 2", pages: "ISO A5", status: "Roadmap 2027", stClass: "st-road", cov: ASSETS.cov12, kitab: "Kurikulum Literasi Al-Muttaqin Press", awas: "Biasakan tabayyun (cek kebenaran) sebelum bercerita.", babs: ["Membaca cerita pendek Islami & merangkum hikmah."] },
+      { no: "13", eks: false, title: "Bahasa Arab Dasar", kl: "KLA-05", klName: "B. Arab & Khath", price: "Batch 3", pages: "ISO A5", status: "Roadmap 2027", stClass: "st-road", cov: ASSETS.cov13, kitab: "Durusul Lughah Al-Arabiyyah", awas: "Perhatikan panjang-pendek (mad) saat melafalkan kosakata Arab.", babs: ["Mufradat rumah, musholla, sekolah & hiwar singkat anak."] },
+      { no: "14", eks: false, title: "Matematika Islami", kl: "KLA-01", klName: "Fiqih & Ibadah", price: "Batch 3", pages: "ISO A5", status: "Roadmap 2027", stClass: "st-road", cov: ASSETS.cov14, kitab: "Integrasi Fiqih Zakat & Muamalah", awas: "Jujur dalam menimbang dan menghitung kembalian di Pasar Kampung.", babs: ["Soal cerita zakat fitrah 2,5 kg, sedekah subuh & jual-beli jujur."] },
+      { no: "15", eks: false, title: "Sains & Ciptaan Allah", kl: "KLA-02", klName: "Aqidah & Tauhid", price: "Batch 3", pages: "ISO A5", status: "Roadmap 2027", stClass: "st-road", cov: ASSETS.cov15, kitab: "Tafakkur Alam & Tauhid Anak", awas: "Setiap fenomena alam adalah tanda kebesaran Allah (Ayat Kauniyah).", babs: ["Siklus air hujan, tanaman, tata surya & kesehatan tubuh."] },
+      { no: "16", eks: false, title: "Seni & Kreativitas Islami", kl: "KLA-05", klName: "B. Arab & Khath", price: "Batch 3", pages: "ISO A5", status: "Roadmap 2027", stClass: "st-road", cov: ASSETS.cov16, kitab: "Geometri Rub el Hizb & Khath", awas: "Jaga adab estetika Islami dalam berkarya.", babs: ["Kaligrafi dasar, pola Rub el Hizb & kerajinan santri."] },
+      { no: "17", eks: false, title: "TIK Untuk Anak Muslim", kl: "KLA-05", klName: "B. Arab & Khath", price: "Batch 3", pages: "ISO A5", status: "Roadmap 2027", stClass: "st-road", cov: ASSETS.cov17, kitab: "Pedoman Adab Digital Al-Muttaqin", awas: "Batasi waktu layar (screen time) dan utamakan izin Abi & Umi.", babs: ["Keamanan digital anak, adab berkomentar & teknologi bermanfaat."] },
+      { no: "18", eks: false, title: "Proyek Kebaikan Kampung", kl: "KLA-06", klName: "Tarikh & Sirah", price: "Batch 3", pages: "ISO A5", status: "Roadmap 2027", stClass: "st-road", cov: ASSETS.cov18, kitab: "Kurikulum Proyek Santri Cilik", awas: "Berbuat baik dimulai dari hal kecil yang istiqamah.", babs: ["Proyek kolaboratif santri berbagi, kerja bakti & kepemimpinan cilik."] }
+    ];
+
+    let curJenjang = "I", curKlaster = "ALL";
+    const booksGrid = document.getElementById("booksGrid");
+    function renderBooks() {
+      const list = BOOKS.filter(b => curKlaster === "ALL" || b.kl === curKlaster);
+      booksGrid.innerHTML = list.map(b => {
+        const code = b.eks ? b.no : `MAM-${curJenjang}-${b.no}`;
+        return `<article class="book-card">
+          <div>
+            <div class="book-cover-wrap" style="cursor:pointer;" onclick="openBookModal('${b.no}')">
+              <img src="${b.cov}" alt="Sampul ${code} ${b.title}" loading="lazy"/>
+            </div>
+            <div style="margin-top:10px;">
+              <span class="book-status ${b.stClass}">${(b.eks || curJenjang === "I") ? b.status : "Roadmap Jenjang " + curJenjang}</span>
+              <h4 style="color:var(--brand-emerald-deep);font-size:0.94rem;margin-top:5px;">${code} • ${b.title}</h4>
+              <p style="font-size:0.78rem;color:var(--text-muted);margin-top:2px;">${b.klName} • <strong>${b.price}</strong> (${b.pages})</p>
+            </div>
+          </div>
+          <button class="btn btn-outline btn-sm" onclick="openBookModal('${b.no}')">Lihat Rincian Bab</button>
+        </article>`;
+      }).join("");
+    }
+    renderBooks();
+
+    document.querySelectorAll("#jenjangBar .filter-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll("#jenjangBar .filter-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        curJenjang = btn.dataset.jenjang;
+        renderBooks();
+      });
+    });
+    document.querySelectorAll("#klasterBar .filter-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll("#klasterBar .filter-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        curKlaster = btn.dataset.klaster;
+        renderBooks();
+      });
+    });
+
+    function openModalHtml(html) {
+      document.getElementById("modalContent").innerHTML = html;
+      document.getElementById("infoModal").classList.add("open");
+    }
+    window.openBookModal = function(no) {
+      const b = BOOKS.find(x => x.no === no);
+      const code = b.eks ? b.no : `MAM-${curJenjang}-${b.no}`;
+      const msg = encodeURIComponent(`Assalamu'alaikum Pengurus Majelis Ta'lim Al Muttaqin, saya ingin bertanya/memesan buku ${code} (${b.title}) standar ISO A5.`);
+      openModalHtml(`
+        <div style="display:grid;grid-template-columns:185px 1fr;gap:18px;align-items:start;margin-bottom:14px;">
+          <img src="${b.cov}" alt="Sampul ${code}" style="width:100%;border-radius:14px;border:2.5px solid var(--accent-gold-badge);box-shadow:var(--shadow-warm);" />
+          <div>
+            <span class="book-code-pill">${code} • ${b.pages} • ${b.price}</span>
+            <h2 style="color:var(--brand-emerald-deep);margin-top:8px;line-height:1.15;">${b.title}</h2>
+            <p style="font-size:0.84rem;color:var(--text-muted);margin:6px 0 8px;"><strong>Kitab Mu'tamad &amp; Acuan:</strong> ${b.kitab}</p>
+            <p style="font-size:0.82rem;color:var(--brand-emerald-deep);background:var(--bg-world-warm);padding:8px 10px;border-radius:10px;">
+              <strong>Tingkat Pembelajaran:</strong> Level A KB–TK (4–5 thn) • Level B SD/MI Kls 1 (6–7 thn) • Level C SD/MI Kls 2 (7–8 thn).
+            </p>
+          </div>
+        </div>
+        <div style="background:var(--bg-story-mint);border:1.5px solid var(--accent-soft-green);border-radius:16px;padding:14px;margin-bottom:12px;">
+          <strong style="color:var(--brand-emerald-deep);display:block;margin-bottom:6px;">Cakupan Bab &amp; Materi Resmi:</strong>
+          <ul style="padding-left:18px;font-size:0.86rem;line-height:1.6;">
+            ${b.babs.map(x => `<li>${x}</li>`).join("")}
+          </ul>
+        </div>
+        <div style="background:var(--bg-alert-coral);border-left:5px solid #C0392B;border-radius:12px;padding:12px 14px;margin-bottom:14px;font-size:0.85rem;">
+          <strong style="color:#922B21;">Kotak “Awas Keliru!”:</strong> ${b.awas}
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;">
+          <a href="https://wa.me/${WA_PHONE}?text=${msg}" target="_blank" rel="noopener" class="btn btn-emerald btn-sm">Pesan via WhatsApp</a>
+          ${b.no === "01" ? '<a href="buku/mam-i-01/" class="btn btn-gold btn-sm">Halaman Khusus QR MAM-I-01 ↗</a>' : ''}
+        </div>
+      `);
+    };
+    document.getElementById("closeModal").addEventListener("click", () => document.getElementById("infoModal").classList.remove("open"));
+    document.getElementById("infoModal").addEventListener("click", e => { if (e.target.id === "infoModal") e.target.classList.remove("open"); });
+
+    // SHORTS SWITCHER
+    document.querySelectorAll(".ep-switch").forEach(btn => {
+      btn.addEventListener("click", () => {
+        if (btn.dataset.ep === "ep1") {
+          document.getElementById("epTitle").textContent = "Episode 001: Yuk, Mengucapkan Salam!";
+          document.getElementById("epDesc").textContent = "0–3s Hook (Zahra) → 3–12s Masalah (Al Qosam) → 12–23s Penjelasan (Abi) → 23–28s Penerapan → 28–30s Pesan Penutup.";
+        } else {
+          document.getElementById("epTitle").textContent = "Episode 002 (QR Bab 2 MAM-I-01): Hemat Air & Membasuh Tumit Rata";
+          document.getElementById("epDesc").textContent = "Rute QR Permanen: /bab/mam-i-01-bab-02/ • Praktik 6 Rukun Wudhu sesuai Mazhab Syafi'i di Area Wudhu Musholla Al-Muttaqin.";
+        }
+      });
+    });
+
+    // LKS TABS
+    document.querySelectorAll(".lks-tab-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".lks-tab-btn").forEach(b => b.classList.remove("active"));
+        document.querySelectorAll(".lks-pane").forEach(p => p.classList.remove("active"));
+        btn.classList.add("active");
+        document.getElementById(btn.dataset.pane).classList.add("active");
+      });
+    });
+
+    // QUIZ 1: 6 RUKUN WUDHU + REWARD BANNER
+    const RUKUN_WUDHU = [
+      { id: 1, text: "Niat di dalam hati saat membasuh wajah" },
+      { id: 2, text: "Membasuh seluruh wajah dengan rata" },
+      { id: 3, text: "Membasuh kedua tangan hingga siku" },
+      { id: 4, text: "Mengusap sebagian kepala" },
+      { id: 5, text: "Membasuh kedua kaki hingga mata kaki (termasuk tumit!)" },
+      { id: 6, text: "Tertib (berurutan tidak dibolak-balik)" }
+    ];
+    let wudhuStep = 1;
+    function renderWudhu() {
+      wudhuStep = 1;
+      document.getElementById("wudhuReward").classList.remove("show");
+      document.getElementById("wudhuFeedback").textContent = "Ayo ketuk Rukun Wudhu ke-1!";
+      const shuffled = [...RUKUN_WUDHU].sort((a,b) => ((a.id * 7) % 5) - ((b.id * 7) % 5));
+      document.getElementById("wudhuList").innerHTML = shuffled.map(item =>
+        `<button class="quiz-option" data-id="${item.id}"><span>${item.text}</span><span class="badge-step">Ketuk</span></button>`
+      ).join("");
+      document.querySelectorAll("#wudhuList .quiz-option").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const id = Number(btn.dataset.id);
+          if (id === wudhuStep) {
+            btn.classList.add("picked");
+            btn.querySelector(".badge-step").textContent = "Benar #" + id;
+            btn.disabled = true;
+            wudhuStep++;
+            if (wudhuStep > 6) {
+              document.getElementById("wudhuFeedback").textContent = "";
+              document.getElementById("wudhuReward").classList.add("show");
+            } else {
+              document.getElementById("wudhuFeedback").textContent = `Bagus! Sekarang ketuk Rukun Wudhu ke-${wudhuStep}.`;
+            }
+          } else {
+            document.getElementById("wudhuFeedback").textContent = `Belum tepat, coba cari urutan Rukun Wudhu ke-${wudhuStep} ya!`;
+          }
+        });
+      });
+    }
+    renderWudhu();
+    document.getElementById("resetWudhu").addEventListener("click", renderWudhu);
+
+    // QUIZ 2: TACTILE 5 RUKUN ISLAM (NO DROPDOWNS!)
+    const RUKUN_ISLAM = [
+      { id: 1, text: "Mengucapkan Dua Kalimat Syahadat" },
+      { id: 2, text: "Mendirikan Sholat 5 Waktu" },
+      { id: 3, text: "Menunaikan Zakat" },
+      { id: 4, text: "Berpuasa di Bulan Ramadhan" },
+      { id: 5, text: "Menunaikan Ibadah Haji bagi yang Mampu" }
+    ];
+    let islamStep = 1;
+    function renderIslam() {
+      islamStep = 1;
+      document.getElementById("islamReward").classList.remove("show");
+      document.getElementById("islamFeedback").textContent = "Ketuk Tiang Rukun Islam ke-1!";
+      const shuffled = [...RUKUN_ISLAM].sort((a,b) => ((a.id * 3) % 5) - ((b.id * 3) % 5));
+      document.getElementById("islamList").innerHTML = shuffled.map(item =>
+        `<button class="quiz-option" data-id="${item.id}"><span>${item.text}</span><span class="badge-step">Ketuk</span></button>`
+      ).join("");
+      document.querySelectorAll("#islamList .quiz-option").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const id = Number(btn.dataset.id);
+          if (id === islamStep) {
+            btn.classList.add("picked");
+            btn.querySelector(".badge-step").textContent = "Tiang #" + id;
+            btn.disabled = true;
+            islamStep++;
+            if (islamStep > 5) {
+              document.getElementById("islamFeedback").textContent = "";
+              document.getElementById("islamReward").classList.add("show");
+            } else {
+              document.getElementById("islamFeedback").textContent = `Mantap! Lanjut ketuk Tiang Rukun Islam ke-${islamStep}.`;
+            }
+          } else {
+            document.getElementById("islamFeedback").textContent = `Ups, cari Tiang Rukun Islam ke-${islamStep} dulu ya!`;
+          }
+        });
+      });
+    }
+    renderIslam();
+    document.getElementById("resetIslam").addEventListener("click", renderIslam);
+
+    // KALKULATOR 100 POIN
+    function updateScore() {
+      const t = Number(document.getElementById("rTeori").value);
+      const h = Number(document.getElementById("rTahfidz").value);
+      const p = Number(document.getElementById("rPraktik").value);
+      const a = Number(document.getElementById("rAdab").value);
+      document.getElementById("vTeori").textContent = t;
+      document.getElementById("vTahfidz").textContent = h;
+      document.getElementById("vPraktik").textContent = p;
+      document.getElementById("vAdab").textContent = a;
+      const tot = t + h + p + a;
+      document.getElementById("totalScore").textContent = `${tot} / 100`;
+      const pred = tot >= 90 ? "MUMTAZ (Istimewa)" : tot >= 80 ? "JAYYID JIDDAN (Sangat Baik)" : tot >= 70 ? "JAYYID (Baik)" : "MAQBUL (Perlu Bimbingan)";
+      document.getElementById("predikatText").textContent = "Predikat: " + pred;
+      return { t, h, p, a, tot, pred };
+    }
+    ["rTeori","rTahfidz","rPraktik","rAdab"].forEach(id => document.getElementById(id).addEventListener("input", updateScore));
+    document.getElementById("sendScoreWA").addEventListener("click", () => {
+      const s = updateScore();
+      const nm = document.getElementById("santriName").value || "Santri Al Muttaqin";
+      const text = encodeURIComponent(`Assalamu'alaikum Dewan Asatidz Majelis Ta'lim Al Muttaqin.\nRekap Simulasi Mutaba'ah Santri:\nNama: ${nm}\nTeori/LKS: ${s.t}/20 | Tahfidz: ${s.h}/35 | Praktik: ${s.p}/30 | Adab: ${s.a}/15\nTotal: ${s.tot}/100 (${s.pred})`);
+      window.open(`https://wa.me/${WA_PHONE}?text=${text}`, "_blank");
+    });
+
+    // 18 MERCHANDISE (ALL 18 INDIVIDUAL STUDIO 3D PRODUCT IMAGES + ZOOM MODAL!)
+    const MERCH = [
+      { no: "01", kl: "K1", klN: "Ngaji & Sekolah", img: ASSETS.m01, name: "Tas Ransel Santri 3D", spec: "Cordura Waterproof 38×28×14 cm, muat Buku A5, cetak 3D Al Qosam berlatar Musholla Al-Muttaqin 1 lantai." },
+      { no: "02", kl: "K1", klN: "Ngaji & Sekolah", img: ASSETS.m02, name: "Tote Bag Kanvas Mengaji", spec: "Kanvas Krem #F8F4E6 tali Hijau #0B6B3A cetak penuh Keluarga Al-Muttaqin (Umi hijab Sage Green)." },
+      { no: "03", kl: "K1", klN: "Ngaji & Sekolah", img: ASSETS.m03, name: "Kotak Pensil 2 Tingkat (EVA 3D)", spec: "EVA Hardcase timbul anti-air resleting emas dengan emblem 3D Al Qosam Canon V1.2." },
+      { no: "04", kl: "K1", klN: "Ngaji & Sekolah", img: ASSETS.m04, name: "Buku Catatan & Jurnal Stiker A5", spec: "ISO A5 Hardcover Al Qosam & Kak Zahra (60 lembar Bookpaper 72 gsm) + bonus lembar stiker reward." },
+      { no: "05", kl: "K1", klN: "Ngaji & Sekolah", img: ASSETS.m05, name: "Map Kancing Peta Kampung", spec: "Map PP F4/A4 menampilkan ilustrasi ceria Kampung Al-Muttaqin untuk LKS & Buku A5." },
+      { no: "06", kl: "K2", klN: "Adab Makan & Minum", img: ASSETS.m06, name: "Tumbler Sedotan (Kids Sipper)", spec: "Stainless 304 (500 ml) varian Al Qosam Hijau (#0B6B3A) & Kak Zahra Pink (#E79BB3)." },
+      { no: "07", kl: "K2", klN: "Adab Makan & Minum", img: ASSETS.m07, name: "Kotak Bekal 3 Sekat (Lunch Box)", spec: "PP BPA-Free 850 ml tutup klik rapat, aman anak, dilengkapi stiker Doa Makan Arab." },
+      { no: "08", kl: "K2", klN: "Adab Makan & Minum", img: ASSETS.m08, name: "Tas Bekal Thermal (Lunch Bag)", spec: "Oxford Waterproof berpelapis foil penahan suhu, desain kanopi Pasar Kampung." },
+      { no: "09", kl: "K3", klN: "Ibadah Praktis", img: ASSETS.m09, name: "My First Sajadah Empuk + Tas Serut", spec: "Bludru busa 4 mm (50×90 cm) motif mihrab geometris (100% bebas wajah di area sujud)." },
+      { no: "10", kl: "K3", klN: "Ibadah Praktis", img: ASSETS.m10, name: "Paket Sarung Instan & Mukena Anak", spec: "Katun Rayon sejuk varian kotak hijau & mukena dusty pink berbordir geometris emas." },
+      { no: "11", kl: "K3", klN: "Ibadah Praktis", img: ASSETS.m11, name: "Peci Hijau Al Qosam & Peci Hitam", spec: "Bludru lembut warna #185B43 & Hitam + pin magnet Rub el Hizb emas lepas-pasang." },
+      { no: "12", kl: "K3", klN: "Ibadah Praktis", img: ASSETS.m12, name: "Celengan Sedekah Subuh 360°", spec: "Kaleng cetak 360° Al Qosam, Kak Zahra & Musholla Al-Muttaqin (100% Canon V1.2) + target sedekah 30 hari." },
+      { no: "13", kl: "K4", klN: "Edutainment & Reward", img: ASSETS.m13, name: "Flashcard Pintar 3D Ring Gantung", spec: "30 kartu Art Carton 310 gsm sudut tumpul ramah anak (Khat Arab 22 pt & ilustrasi)." },
+      { no: "14", kl: "K4", klN: "Edutainment & Reward", img: ASSETS.m14, name: "Stiker Pack Die-Cut & Bintang", spec: "25 stiker vinyl waterproof karakter Al Qosam, lentera, bulan sabit & bintang reward." },
+      { no: "15", kl: "K4", klN: "Edutainment & Reward", img: ASSETS.m15, name: "Gantungan Kunci Akrilik & Pin Hijab", spec: "Akrilik 4 mm cetak UV 2 sisi karakter Al Qosam, lentera & pin bunga hijab." },
+      { no: "16", kl: "K4", klN: "Edutainment & Reward", img: ASSETS.m16, name: "Lanyard Full-Print & KTS QR", spec: "Tali tisu 2 cm motif geometris emas-hijau + Kartu Tanda Santri QR Mutaba'ah." },
+      { no: "17", kl: "K4", klN: "Edutainment & Reward", img: ASSETS.m17, name: "Payung Lipat Doa Hujan", spec: "Rangka fiber aman ujung tumpul warna hijau-krem bermotif awan & titik hujan." },
+      { no: "18", kl: "K4", klN: "Edutainment & Reward", img: ASSETS.m18, name: "Medali Rub el Hizb & Map Syahadah", spec: "Medali bintang 8 sudut emas pita hijau & map kelulusan santri jenjang Ula." }
+    ];
+    let curMkl = "ALL";
+    function renderMerch() {
+      const list = MERCH.filter(m => curMkl === "ALL" || m.kl === curMkl);
+      document.getElementById("merchGrid").innerHTML = list.map(m => {
+        const msg = encodeURIComponent(`Assalamu'alaikum Pengurus Majelis Ta'lim Al Muttaqin, saya ingin memesan Merchandise #${m.no}: ${m.name}.`);
+        return `<article class="merch-card">
+          <div>
+            <div class="merch-img-wrap" onclick="openMerchModal('${m.no}')">
+              <img src="${m.img}" alt="Merchandise #${m.no} ${m.name}" loading="lazy" />
+              <span class="merch-zoom-tag">Lihat Foto ↗</span>
+            </div>
+            <div style="margin-top:10px;">
+              <span class="book-code-pill">#${m.no} • ${m.klN}</span>
+              <h4 style="color:var(--brand-emerald-deep);margin-top:6px;font-size:0.96rem;">${m.name}</h4>
+              <p style="font-size:0.81rem;color:var(--text-muted);margin-top:4px;">${m.spec}</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:8px;margin-top:4px;">
+            <button class="btn btn-outline btn-sm" style="flex:0.8;" onclick="openMerchModal('${m.no}')">Detail</button>
+            <a href="https://wa.me/${WA_PHONE}?text=${msg}" target="_blank" rel="noopener" class="btn btn-gold btn-sm" style="flex:1.2;">Pesan WA</a>
+          </div>
+        </article>`;
+      }).join("");
+    }
+    window.openMerchModal = function(no) {
+      const m = MERCH.find(x => x.no === no);
+      const msg = encodeURIComponent(`Assalamu'alaikum Pengurus Majelis Ta'lim Al Muttaqin, saya ingin memesan Merchandise #${m.no}: ${m.name}.`);
+      openModalHtml(`
+        <img src="${m.img}" alt="${m.name}" style="width:100%;max-height:360px;object-fit:contain;background:#F5EDD9;border-radius:16px;border:2px solid var(--accent-gold-badge);margin-bottom:14px;" />
+        <span class="book-code-pill">MERCHANDISE #${m.no} • ${m.klN}</span>
+        <h2 style="color:var(--brand-emerald-deep);margin-top:8px;">${m.name}</h2>
+        <p style="font-size:0.93rem;color:var(--text-charcoal);margin:8px 0 12px;">${m.spec}</p>
+        <div style="background:var(--bg-story-mint);border:1.5px solid var(--accent-soft-green);border-radius:12px;padding:10px 14px;font-size:0.82rem;color:var(--brand-emerald-deep);margin-bottom:14px;">
+          <strong>Standar Adab &amp; Canon V1.2 / V6:</strong> Diproduksi sesuai pedoman Majelis Ta'lim Al Muttaqin — aman anak, bebas karakter pada area sujud sajadah, dan mendukung pembiayaan operasional pendidikan santri.
+        </div>
+        <a href="https://wa.me/${WA_PHONE}?text=${msg}" target="_blank" rel="noopener" class="btn btn-emerald" style="width:100%;">Pesan #${m.no} ${m.name} via WhatsApp</a>
+      `);
+    };
+    renderMerch();
+    document.querySelectorAll("#merchFilterBar .filter-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll("#merchFilterBar .filter-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        curMkl = btn.dataset.mkl;
+        renderMerch();
+      });
+    });
+
+    // 9 DEWAN ASATIDZ
+    const ASATIDZ = [
+      ["1. Ahmad Izzuddin Al Qosam, S.H.", "Ketua Majelis, Kepala Bidang Pendidikan, Koordinator Kurikulum, Penulis Utama Fiqih & Gate 1 Tashih."],
+      ["2. Nadia Khaula Azzahra, S.M.", "Penyelarasan Manajemen Pembelajaran & Supervisi Kelas Jenjang Ula."],
+      ["3. Nurul Qisthina, Amd.Ak.", "Evaluasi Pembiasaan, Sistem Skor 100 Poin & Administrasi Rapor Santri."],
+      ["4. Ahmad Ishommuddin Al Qosam, S.T.", "Teknologi Media, Desain Grafis Belajar & Gate 2 Verifikasi Canon Visual V4.1."],
+      ["5. Dimas Purnomo Aji, S.Pd.", "Metodologi Pedagogi Anak Usia Dini & Gate 3 Uji Keterbacaan Anak."],
+      ["6. Yoga Indrawan, S.M.", "Bendahara, Manajemen Tata Kelola Operasional, Mutaba'ah & Pembukaan Tromol."],
+      ["7. Muhammad Rizki Aditia, Lc.", "Dewan Syariah ZISWAF, Pentashih Teks Arab, Hadits, Fiqih Mazhab Syafi'i & Gate 1."],
+      ["8. Agus Julianto, S.Pd.", "Pengembangan Lembar Kerja (LKS), Saksi Tromol & Aktivitas Digital Anak (Gate 3)."],
+      ["9. Syadiah Azzahra, S.Kom.", "Sistem Informasi, Digitalisasi Pembelajaran, QR Code & Gate 4 Rilis Web."]
+    ];
+    document.getElementById("asatidzGrid").innerHTML = ASATIDZ.map(([n, r]) =>
+      `<div class="asatidz-card"><strong>${n}</strong><span>${r}</span></div>`
+    ).join("");
+
+    // SAHABAT JARIYAH
+    document.querySelectorAll(".paket-card").forEach(card => {
+      card.addEventListener("click", () => {
+        document.querySelectorAll(".paket-card").forEach(c => c.classList.remove("selected"));
+        card.classList.add("selected");
+        document.getElementById("waKet").value = card.dataset.paket;
+      });
+    });
+    document.getElementById("submitWA").addEventListener("click", () => {
+      const jenis = document.getElementById("waJenis").value;
+      const nama = document.getElementById("waNama").value.trim() || "(Belum diisi)";
+      const ket = document.getElementById("waKet").value.trim() || "-";
+      const msg = encodeURIComponent(`Assalamu'alaikum Pengurus Majelis Ta'lim Al Muttaqin.\nLayanan: ${jenis}\nNama: ${nama}\nDetail/Paket: ${ket}\nMohon arahan selanjutnya. Jazakumullahu khairan.`);
+      window.open(`https://wa.me/${WA_PHONE}?text=${msg}`, "_blank");
+    });
+
+    // 5 PILAR EKOSISTEM MODAL (FROM MASTER DRIVE MAP)
+    const PILARS = {
+      kids: { title: "Pilar 1: Al Muttaqin Kids (Kisah Al-Muttaqin)", tag: "Usia 4–12 Tahun (KB–TK s/d SD)", desc: "Portal edukasi Islam anak berbasis 18 Buku Pintar ISO A5, 3 Buku Eksklusif (Iqro, Imla, Juz 'Amma), animasi 3D Shorts, Game Jejak Kisah Kampung (15 Misi), dan sistem Mutaba'ah 100 Poin." },
+      brothers: { title: "Pilar 2: Al Muttaqin Brothers", tag: "Remaja Putra & Pemuda Muslim (13–28 Tahun)", desc: "Wadah pembinaan pemuda putra, kajian kepemudaan, olahraga & kegiatan sosial masjid dengan pemisahan ruang mutlak (tanpa ikhtilat)." },
+      sisters: { title: "Pilar 3: Al Muttaqin Sisters", tag: "Remaja Putri & Muslimah Muda (13–28 Tahun)", desc: "Tagline: “Anggun Berilmu, Teguh Berprinsip”. Ruang aman pembinaan akhlak muslimah muda, Sisters Halqah, fikih wanita, literasi dakwah, dengan protokol privasi Zero Face & Iffah." },
+      mothers: { title: "Pilar 4: Al Muttaqin Mothers (Ummahat Al-Muttaqin)", tag: "Kajian & Tahsin Ibu-Ibu", desc: "Majelis pembinaan ibu-ibu, tahsin Al-Qur'an, fikih keluarga, serta pengayom dan teladan langsung bagi pengurus Al Muttaqin Sisters dan santri cilik." },
+      fathers: { title: "Pilar 5: Al Muttaqin Fathers (Rijalul Muttaqin)", tag: "Wirid, Tahsin & Malam Jumat Bapak-Bapak", desc: "Kajian kitab induk majelis, program tahsin dasar & lanjutan, tadarus dan wirid ba'da sholat, serta program kirim doa bersama, Yasin & tahlil malam Jumat." }
+    };
+    document.querySelectorAll("#pillarPills .pillar-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const p = PILARS[btn.dataset.p];
+        openModalHtml(`
+          <span class="book-code-pill">EKOSISTEM 5 PILAR MAJELIS TA'LIM AL MUTTAQIN</span>
+          <h2 style="color:var(--brand-emerald-deep);margin-top:8px;">${p.title}</h2>
+          <p style="font-weight:700;color:#8A6507;margin:4px 0 12px;">${p.tag}</p>
+          <p style="font-size:0.95rem;line-height:1.65;margin-bottom:16px;">${p.desc}</p>
+          <a href="https://wa.me/${WA_PHONE}?text=${encodeURIComponent('Assalamu\'alaikum Pengurus Majelis Ta\'lim Al Muttaqin, saya ingin informasi kegiatan ' + p.title + '.')}" target="_blank" rel="noopener" class="btn btn-emerald btn-sm">Tanya Jadwal Pilar Ini via WA</a>
+        `);
+      });
+    });
+  </script>
+</body>
+</html>

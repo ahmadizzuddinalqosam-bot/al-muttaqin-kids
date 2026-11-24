@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QR Bab 2 MAM-I-01 — 6 Rukun Wudhu | Al Muttaqin Kids</title>
+  <link rel="icon" type="image/png" href="../../assets/logo/LOGO_AL_MUTTAQIN_MASTER_RESOLUSI_2000PX_TRANSPARAN.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Noto+Naskh+Arabic:wght@700&family=Nunito:wght@600;700;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    body{font-family:'Nunito',sans-serif;background:#F8F4E6;color:#232323;margin:0;padding:18px;line-height:1.6;}
+    .wrap{max-width:680px;margin:0 auto;}
+    .card{background:#F8F5EB;border:2.5px solid #D4A017;border-radius:22px;padding:20px;margin-bottom:16px;box-shadow:0 8px 24px rgba(18,90,62,.09);}
+    .top{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+    .top img{width:54px;height:54px;object-fit:contain;}
+    h1,h2{font-family:'Baloo 2',sans-serif;color:#125A3E;margin:0;}
+    .arabic{font-family:'Noto Naskh Arabic',serif;direction:rtl;font-size:2rem;line-height:2.1;color:#125A3E;text-align:center;margin:10px 0;}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:10px 20px;border-radius:999px;background:#0B6B3A;color:#fff;font-family:'Poppins',sans-serif;font-weight:700;text-decoration:none;border-bottom:4px solid #074927;}
+    .opt{width:100%;text-align:left;padding:12px 14px;margin-bottom:8px;border-radius:14px;border:2px solid #46A5D7;background:#fff;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;}
+    .opt.ok{background:#F2F8F4;border-color:#0B6B3A;color:#0B6B3A;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="top">
+        <img src="../../assets/logo/LOGO_AL_MUTTAQIN_MASTER_RESOLUSI_2000PX_TRANSPARAN.png" alt="Logo Majelis Ta'lim Al Muttaqin" />
+        <div>
+          <div style="font-size:.75rem;font-weight:800;color:#0B6B3A;">HUB QR BUKU MAM-I-01 • BAB 2</div>
+          <h1>Hemat Air &amp; 6 Rukun Wudhu</h1>
+        </div>
+      </div>
+      <img src="../../assets/locations/MAM_LOC01_MUSHOLLA_EXTFRONT_V4.webp" alt="Musholla Al-Muttaqin" style="width:100%;border-radius:14px;margin-bottom:12px;" />
+      <p><strong>Episode 002 (30 Detik • 9:16):</strong> Al Qosam belajar berwudhu dengan tertib dan hemat air bersama Abi di Area Wudhu <strong>Musholla Al-Muttaqin</strong>, memastikan tumit kaki terbasuh rata hingga mata kaki sesuai Mazhab Syafi'i.</p>
+      <div style="background:#fff;border:3px double #0B6B3A;border-radius:16px;padding:14px;margin:14px 0;">
+        <div style="text-align:center;font-size:.76rem;font-weight:800;color:#0B6B3A;">NIAT WUDHU (TANPA TRANSLITERASI LATIN)</div>
+        <div class="arabic" dir="rtl" lang="ar">نَوَيْتُ الْوُضُوْءَ لِرَفْعِ الْحَدَثِ الْأَصْغَرِ فَرْضًا لِلّٰهِ تَعَالَى</div>
+        <p style="text-align:center;font-style:italic;font-size:.88rem;color:#526058;margin:0;">“Aku niat berwudhu untuk menghilangkan hadats kecil, fardhu karena Allah Ta'ala.”</p>
+      </div>
+      <h2>Kuis Cepat: Urutkan 6 Rukun Wudhu!</h2>
+      <div id="q" style="margin-top:10px;"></div>
+      <div id="fb" style="font-weight:800;color:#0B6B3A;margin:8px 0;">Ketuk Rukun Wudhu ke-1!</div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;">
+        <a href="../../" class="btn">← Kembali ke Portal Al Muttaqin Kids</a>
+        <a href="https://ahmadizzuddinalqosam-bot.github.io/Game-Jejak-Kisah-Kampung-Al-Muttaqin/" target="_blank" rel="noopener" class="btn" style="background:#D4A017;color:#232323;border-bottom-color:#9E740B;">Main Game Kampung ↗</a>
+      </div>
+    </div>
+  </div>
+  <script>
+    const D=[{i:1,t:"Niat saat membasuh wajah"},{i:2,t:"Membasuh seluruh wajah"},{i:3,t:"Membasuh kedua tangan hingga siku"},{i:4,t:"Mengusap sebagian kepala"},{i:5,t:"Membasuh kedua kaki hingga mata kaki"},{i:6,t:"Tertib (berurutan)"}];
+    let step=1;
+    const sh=[...D].sort((a,b)=>((a.i*7)%5)-((b.i*7)%5));
+    document.getElementById("q").innerHTML=sh.map(x=>`<button class="opt" data-i="${x.i}"><span>${x.t}</span><span>Ketuk</span></button>`).join("");
+    document.querySelectorAll(".opt").forEach(b=>b.addEventListener("click",()=>{
+      const id=Number(b.dataset.i);
+      if(id===step){b.classList.add("ok");b.lastChild.textContent="Benar #"+id;b.disabled=true;step++;document.getElementById("fb").textContent=step>6?"★★★ MUMTAZ! Semua 6 Rukun Wudhu benar! ★★★":"Bagus! Ketuk Rukun ke-"+step;}
+      else{document.getElementById("fb").textContent="Coba cari Rukun ke-"+step+" dulu ya!";}
+    }));
+  </script>
+</body>
+</html>
