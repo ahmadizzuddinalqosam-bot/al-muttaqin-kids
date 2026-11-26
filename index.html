@@ -1069,7 +1069,7 @@
         </div>
       </div>
       <div style="text-align:center;font-size:0.8rem;color:#A8D6BA;padding-top:18px;">
-        &copy; 2026/2027 Majelis Ta'lim Al Muttaqin • Al Muttaqin Kids Portal v7.0 Full Auto-Sync Edition • <span id="cmsSyncBadge">Auto-Sync Game Aktif</span>
+        &copy; 2026/2027 Majelis Ta'lim Al Muttaqin • Al Muttaqin Kids Portal v7.1 Auto-Sync Master Peta Edition • <span id="cmsSyncBadge">Auto-Sync Game Aktif</span> • <button type="button" id="btnForceCmsRefresh" style="background:rgba(255,255,255,0.14);color:#FFF3C4;border:1px solid rgba(212,160,23,0.6);border-radius:999px;padding:2px 10px;font-size:0.74rem;cursor:pointer;font-family:inherit;">↻ Segarkan CMS</button>
       </div>
     </div>
   </footer>
@@ -1203,7 +1203,7 @@
         return `<article class="book-card">
           <div>
             <div class="book-cover-wrap" style="cursor:pointer;" onclick="openBookModal('${b.no}')">
-              <img src="${b.cov}" alt="Sampul ${code} ${b.title}" loading="lazy"/>
+              <img src="${b.cov}" alt="Sampul ${code} ${b.title}" loading="lazy" data-fallback="${b.fallbackCov || ASSETS.cov01}" onerror="handleSmartImgError(this)"/>
             </div>
             <div style="margin-top:10px;">
               <span class="book-status ${b.stClass}">${(b.eks || curJenjang === "I") ? b.status : "Roadmap Jenjang " + curJenjang}</span>
@@ -1244,7 +1244,7 @@
       const msg = encodeURIComponent(`Assalamu'alaikum Pengurus Majelis Ta'lim Al Muttaqin, saya ingin bertanya/memesan buku ${code} (${b.title}) standar ISO A5.`);
       openModalHtml(`
         <div style="display:grid;grid-template-columns:185px 1fr;gap:18px;align-items:start;margin-bottom:14px;">
-          <img src="${b.cov}" alt="Sampul ${code}" style="width:100%;border-radius:14px;border:2.5px solid var(--accent-gold-badge);box-shadow:var(--shadow-warm);" />
+          <img src="${b.cov}" alt="Sampul ${code}" data-fallback="${b.fallbackCov || ASSETS.cov01}" onerror="handleSmartImgError(this)" style="width:100%;border-radius:14px;border:2.5px solid var(--accent-gold-badge);box-shadow:var(--shadow-warm);" />
           <div>
             <span class="book-code-pill">${code} • ${b.pages} • ${b.price}</span>
             <h2 style="color:var(--brand-emerald-deep);margin-top:8px;line-height:1.15;">${b.title}</h2>
@@ -1429,7 +1429,7 @@
         return `<article class="merch-card">
           <div>
             <div class="merch-img-wrap" onclick="openMerchModal('${m.no}')">
-              <img src="${m.img}" alt="Merchandise #${m.no} ${m.name}" loading="lazy" />
+              <img src="${m.img}" alt="Merchandise #${m.no} ${m.name}" loading="lazy" data-fallback="${m.fallbackImg || ASSETS.m01}" onerror="handleSmartImgError(this)" />
               <span class="merch-zoom-tag">Lihat Foto ↗</span>
             </div>
             <div style="margin-top:10px;">
@@ -1449,7 +1449,7 @@
       const m = MERCH.find(x => x.no === no);
       const msg = encodeURIComponent(`Assalamu'alaikum Pengurus Majelis Ta'lim Al Muttaqin, saya ingin memesan Merchandise #${m.no}: ${m.name}.`);
       openModalHtml(`
-        <img src="${m.img}" alt="${m.name}" style="width:100%;max-height:360px;object-fit:contain;background:#F5EDD9;border-radius:16px;border:2px solid var(--accent-gold-badge);margin-bottom:14px;" />
+        <img src="${m.img}" alt="${m.name}" data-fallback="${m.fallbackImg || ASSETS.m01}" onerror="handleSmartImgError(this)" style="width:100%;max-height:360px;object-fit:contain;background:#F5EDD9;border-radius:16px;border:2px solid var(--accent-gold-badge);margin-bottom:14px;" />
         <span class="book-code-pill">MERCHANDISE #${m.no} • ${m.klN}</span>
         <h2 style="color:var(--brand-emerald-deep);margin-top:8px;">${m.name}</h2>
         <p style="font-size:0.93rem;color:var(--text-charcoal);margin:8px 0 12px;">${m.spec}</p>
@@ -1571,12 +1571,53 @@
     let GAMES_LIST = [...DEFAULT_GAMES];
     const GAME_FALLBACK_THUMBS = [ASSETS.loc04, ASSETS.loc02, ASSETS.loc03, ASSETS.loc06, ASSETS.gerbang];
 
+    function extractGoogleDriveId(url) {
+      const s = String(url || "").trim();
+      if (!s || !/drive\.google\.com|googleusercontent\.com/i.test(s)) return "";
+      let m = s.match(/\/file\/d\/([a-zA-Z0-9_-]{15,})/);
+      if (m) return m[1];
+      m = s.match(/\/d\/([a-zA-Z0-9_-]{15,})/);
+      if (m) return m[1];
+      m = s.match(/[?&]id=([a-zA-Z0-9_-]{15,})/);
+      return m ? m[1] : "";
+    }
+
     function normalizeAssetUrl(rawPath, folderHint) {
       const p = String(rawPath || "").trim();
       if (!p) return "";
+      // Auto-konversi link Google Drive (/view, /open?id=, /uc?id=) ke URL gambar HD bebas blokir
+      const gId = extractGoogleDriveId(p);
+      if (gId) {
+        return `https://drive.google.com/thumbnail?id=${gId}&sz=w1000`;
+      }
       if (/^(https?:|data:image\/|assets\/)/i.test(p)) return p;
       return `assets/${folderHint}/${p}`;
     }
+
+    // Fallback berlapis anti gambar pecah: Drive thumbnail -> lh3 CDN -> Aset Lokal GitHub
+    window.handleSmartImgError = function(imgEl) {
+      if (!imgEl) return;
+      const step = Number(imgEl.dataset.errStep || "0");
+      const gId = extractGoogleDriveId(imgEl.src);
+      if (step === 0 && gId) {
+        imgEl.dataset.errStep = "1";
+        imgEl.src = `https://lh3.googleusercontent.com/d/${gId}=w1000`;
+        return;
+      }
+      const fb = imgEl.dataset.fallback;
+      if (step < 2 && fb && imgEl.src !== fb) {
+        imgEl.dataset.errStep = "2";
+        imgEl.src = fb;
+        return;
+      }
+      imgEl.onerror = null;
+    };
+
+    // Simpan peta gambar lokal bawaan agar selalu jadi cadangan aman jika link Drive dicabut
+    const LOCAL_BOOK_COVERS = {};
+    BOOKS.forEach(b => { LOCAL_BOOK_COVERS[String(b.no).toUpperCase()] = b.cov; });
+    const LOCAL_MERCH_IMGS = {};
+    MERCH.forEach(m => { LOCAL_MERCH_IMGS[String(m.no).toUpperCase()] = m.img; });
 
     function normalizeGameUrl(u) {
       return String(u || "").trim().toLowerCase().replace(/\/+$/, "");
@@ -1599,7 +1640,7 @@
         return `<article class="game-card ${g.autoDetected ? 'auto-detected' : ''}">
           <div>
             <div class="game-thumb-wrap">
-              <img src="${thumb}" alt="${g.title}" loading="lazy" />
+              <img src="${thumb}" alt="${g.title}" loading="lazy" data-fallback="${GAME_FALLBACK_THUMBS[idx % GAME_FALLBACK_THUMBS.length]}" onerror="handleSmartImgError(this)" />
               <span class="${tagClass}">${g.badge}</span>
             </div>
             <h3 style="color:var(--brand-emerald-deep);font-size:1.05rem;margin-top:11px;line-height:1.25;">${g.title}</h3>
@@ -1744,22 +1785,30 @@
     }
     renderShortsControls();
 
-    // Google Sheets CMS Auto-Sync (Books, Merch, KPI Kas, Shorts, Games)
-    async function syncGoogleSheetCMS() {
+    // Google Sheets CMS Auto-Sync v7.1 (Books, Merch, KPI Kas, Shorts, Games + Drive HD Images)
+    async function syncGoogleSheetCMS(forceRefresh = false) {
       const url = (SYNC_CFG.CMS_WEBAPP_URL || "").trim();
       if (!url) return;
-      const cacheKey = "amk_v7_cms_cache";
+      const cacheKey = "amk_v71_cms_cache";
+      const urlHasRefresh = /[?&]refresh=1/i.test(window.location.search || "");
+      const bypass = forceRefresh || urlHasRefresh;
+      const badge = document.getElementById("cmsSyncBadge");
+      if (forceRefresh && badge) badge.textContent = "Menyegarkan data CMS...";
+
       try {
         let data = null;
-        const cached = localStorage.getItem(cacheKey);
-        if (cached) {
-          const parsed = JSON.parse(cached);
-          if (Date.now() - parsed.ts < SYNC_CFG.CMS_CACHE_MINUTES * 60 * 1000) {
-            data = parsed.data;
+        if (!bypass) {
+          const cached = localStorage.getItem(cacheKey);
+          if (cached) {
+            const parsed = JSON.parse(cached);
+            if (Date.now() - parsed.ts < SYNC_CFG.CMS_CACHE_MINUTES * 60 * 1000) {
+              data = parsed.data;
+            }
           }
         }
         if (!data) {
-          const resp = await fetch(url);
+          const fetchUrl = bypass ? url + (url.includes("?") ? "&" : "?") + "_t=" + Date.now() : url;
+          const resp = await fetch(fetchUrl);
           if (!resp.ok) throw new Error("CMS HTTP " + resp.status);
           data = await resp.json();
           if (data && data.ok) {
@@ -1768,13 +1817,15 @@
         }
         if (!data || !data.ok) return;
 
-        // 1. Update BOOKS from Google Sheet
+        // 1. Update BOOKS from Google Sheet (support auto Drive HD image + fallback lokal)
         if (Array.isArray(data.books) && data.books.length > 0) {
           BOOKS = data.books.map(r => {
+            const noStr = r.NO || "00";
+            const fbCov = LOCAL_BOOK_COVERS[String(noStr).toUpperCase()] || ASSETS.cov01;
             const st = r.STATUS || "Roadmap 2027";
             const stClass = /selesai|final/i.test(st) ? "st-done" : (/draf|proses/i.test(st) ? "st-draft" : "st-road");
             return {
-              no: r.NO || "00",
+              no: noStr,
               eks: /^(YA|TRUE|1)$/i.test(r.EKSKLUSIF || ""),
               title: r.JUDUL || "Judul Buku",
               kl: r.KLASTER || "KLA-01",
@@ -1783,7 +1834,8 @@
               pages: r.HALAMAN || "ISO A5",
               status: st,
               stClass,
-              cov: normalizeAssetUrl(r.GAMBAR_COVER, "covers") || ASSETS.cov01,
+              cov: normalizeAssetUrl(r.GAMBAR_COVER, "covers") || fbCov,
+              fallbackCov: fbCov,
               kitab: r.KITAB_RUJUKAN || "Majelis Ta'lim Al Muttaqin",
               awas: r.AWAS_KELIRU || "Perhatikan adab menuntut ilmu bersama Abi & Umi.",
               babs: (r.DAFTAR_BAB_PISAH_PIPE || "").split("|").map(s => s.trim()).filter(Boolean)
@@ -1792,16 +1844,21 @@
           renderBooks();
         }
 
-        // 2. Update MERCH from Google Sheet (supports adding #19, #20, swapping images, adding prices)
+        // 2. Update MERCH from Google Sheet (auto-tambah #19+, foto Drive HD + fallback lokal)
         if (Array.isArray(data.merch) && data.merch.length > 0) {
-          MERCH = data.merch.map(r => ({
-            no: r.NO || "00",
-            kl: r.KLASTER || "K1",
-            klN: r.NAMA_KLASTER || "Merchandise Santri",
-            img: normalizeAssetUrl(r.GAMBAR, "merch") || ASSETS.m01,
-            name: r.NAMA_PRODUK || "Produk Al Muttaqin Kids",
-            spec: (r.SPESIFIKASI || "") + (r.HARGA_OPSIONAL ? ` • Harga: ${r.HARGA_OPSIONAL}` : "")
-          }));
+          MERCH = data.merch.map(r => {
+            const noStr = r.NO || "00";
+            const fbImg = LOCAL_MERCH_IMGS[String(noStr).toUpperCase()] || ASSETS.m01;
+            return {
+              no: noStr,
+              kl: r.KLASTER || "K1",
+              klN: r.NAMA_KLASTER || "Merchandise Santri",
+              img: normalizeAssetUrl(r.GAMBAR, "merch") || fbImg,
+              fallbackImg: fbImg,
+              name: r.NAMA_PRODUK || "Produk Al Muttaqin Kids",
+              spec: (r.SPESIFIKASI || "") + (r.HARGA_OPSIONAL ? ` • Harga: ${r.HARGA_OPSIONAL}` : "")
+            };
+          });
           renderMerch();
         }
 
@@ -1848,15 +1905,29 @@
           renderGames();
         }
 
-        const badge = document.getElementById("cmsSyncBadge");
-        if (badge) badge.textContent = "Auto-Sync Game + Google Sheets CMS Aktif ✓";
+        if (badge) {
+          const hasPeta = data.syncMeta && data.syncMeta.masterPetaConnected;
+          badge.textContent = hasPeta
+            ? "Auto-Sync Game + Master Peta Drive v7.1 Aktif ✓"
+            : "Auto-Sync Game + Google Sheets CMS v7.1 Aktif ✓";
+          if (data.syncMeta && data.syncMeta.lastDriveSummary) {
+            badge.title = "Sync Drive Terakhir: " + data.syncMeta.lastDriveSummary;
+          }
+        }
       } catch (err) {
-        console.info("Google Sheets CMS fallback ke data bawaan v7.0:", err.message);
+        console.info("Google Sheets CMS fallback ke data bawaan v7.1:", err.message);
       }
     }
 
+    const btnForceCms = document.getElementById("btnForceCmsRefresh");
+    if (btnForceCms) {
+      btnForceCms.addEventListener("click", () => {
+        syncGoogleSheetCMS(true).then(() => syncGitHubGames(true));
+      });
+    }
+
     // Jalankan sinkronisasi otomatis secara paralel non-blocking
-    syncGoogleSheetCMS().then(() => syncGitHubGames(false));
+    syncGoogleSheetCMS(false).then(() => syncGitHubGames(false));
 
   </script>
 </body>
