@@ -410,6 +410,39 @@
     .modal-box { background: var(--bg-canvas-cream); border: 3px solid var(--accent-gold-badge); border-radius: 24px; max-width: 740px; width: 100%; max-height: 88vh; overflow-y: auto; padding: 24px; position: relative; }
     .modal-close { position: absolute; top: 14px; right: 14px; width: 40px; height: 40px; border-radius: 50%; border: none; background: var(--brand-emerald-cover); color: #FFFFFF; font-size: 1.2rem; cursor: pointer; }
 
+
+    /* SECTION ARENA GAME (3 SERIAL LIVE + AUTO-SYNC GITHUB) */
+    .sync-status-bar {
+      display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap;
+      background: var(--bg-card-ivory); border: 2px solid var(--accent-soft-green);
+      padding: 7px 14px; border-radius: 999px; font-size: 0.78rem; font-weight: 700; color: var(--brand-emerald-deep);
+    }
+    .sync-dot { width: 10px; height: 10px; border-radius: 50%; background: #19A95D; box-shadow: 0 0 0 4px rgba(25,169,93,0.2); display: inline-block; }
+    .sync-refresh-btn {
+      background: var(--brand-emerald-cover); color: #FFFFFF; border: none; border-radius: 999px;
+      padding: 4px 12px; font-family: 'Poppins', sans-serif; font-size: 0.73rem; font-weight: 700; cursor: pointer;
+    }
+    .sync-refresh-btn:hover { filter: brightness(1.08); }
+    .games-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 26px; }
+    .game-card {
+      background: var(--bg-card-ivory); border: 2.5px solid #E2D5B9; border-radius: 22px; padding: 15px;
+      display: flex; flex-direction: column; justify-content: space-between; gap: 12px; box-shadow: var(--shadow-warm);
+      transition: transform 0.18s ease, border-color 0.18s ease;
+    }
+    .game-card:hover { transform: translateY(-4px); border-color: var(--accent-gold-badge); }
+    .game-card.auto-detected { border-color: var(--accent-sky-lks); background: #F5FBFF; }
+    .game-thumb-wrap { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; border: 2px solid var(--accent-waqar-gold); background: var(--brand-emerald-deep); }
+    .game-thumb-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .game-series-tag {
+      position: absolute; top: 10px; left: 10px; background: var(--accent-gold-badge); color: var(--text-charcoal);
+      font-family: 'Poppins', sans-serif; font-size: 0.7rem; font-weight: 800; padding: 4px 10px; border-radius: 999px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .game-series-tag.is-new { background: var(--accent-sky-lks); color: #FFFFFF; }
+    .yt-embed-box { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; margin: 12px 0; border: 2px solid rgba(212,160,23,0.6); background: #000; display: none; }
+    .yt-embed-box iframe { width: 100%; height: 100%; border: 0; }
+    @media (max-width: 980px) { .games-grid { grid-template-columns: 1fr; } }
+
     @media (max-width: 980px) {
       .hero-grid, .world-layout, .media-lks-grid, .jariyah-grid, .footer-grid, .schedule-grid { grid-template-columns: 1fr; }
       #merchandise > .container > div[style*='grid-template-columns'], #modalContent > div[style*='grid-template-columns'] { grid-template-columns: 1fr !important; }
@@ -428,6 +461,7 @@
       .loc-thumbs-row { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
+  <script src="cms-config.js"></script>
 </head>
 <body>
 
@@ -447,6 +481,7 @@
         <li><a href="#beranda">Beranda</a></li>
         <li><a href="#kampung">Kampung</a></li>
         <li><a href="#buku">Buku A5</a></li>
+        <li><a href="#arena-game">Arena Game</a></li>
         <li><a href="#tonton">Tonton &amp; LKS</a></li>
         <li><a href="#merchandise">Merchandise</a></li>
         <li><a href="#asatidz">Majelis &amp; Jadwal</a></li>
@@ -469,7 +504,7 @@
           </p>
           <div class="hero-actions">
             <a href="#buku" class="btn btn-gold">Jelajahi Buku A5</a>
-            <a href="https://ahmadizzuddinalqosam-bot.github.io/Game-Jejak-Kisah-Kampung-Al-Muttaqin/" target="_blank" rel="noopener" class="btn btn-emerald">Mainkan Game Kampung ↗</a>
+            <a href="#arena-game" class="btn btn-emerald">Arena 3 Serial Game Live</a>
             <a href="#tonton" class="btn btn-outline">Tonton &amp; LKS Anak</a>
           </div>
           <div class="level-strip">
@@ -507,11 +542,11 @@
             <span style="font-size:0.78rem;color:var(--text-muted);">Paket Batch 1 Rp180rb (6 Modul).</span>
           </div>
         </a>
-        <a href="https://ahmadizzuddinalqosam-bot.github.io/Game-Jejak-Kisah-Kampung-Al-Muttaqin/" target="_blank" rel="noopener" class="pillar-shortcut">
-          <img src="assets/locations/MAM_WORLD_GERBANG_KAMPUNG_V4.webp" alt="Game Jejak Kisah Kampung Al-Muttaqin" class="pillar-thumb" />
+        <a href="#arena-game" class="pillar-shortcut">
+          <img src="assets/locations/MAM_WORLD_GERBANG_KAMPUNG_V4.webp" alt="Arena 3 Serial Game Al Muttaqin Kids" class="pillar-thumb" />
           <div>
-            <strong style="color:var(--brand-emerald-deep);display:block;font-size:0.9rem;">Game 15 Misi Kebaikan ↗</strong>
-            <span style="font-size:0.78rem;color:var(--text-muted);">Jejak Kisah Kampung (Live Web).</span>
+            <strong style="color:var(--brand-emerald-deep);display:block;font-size:0.9rem;">3 Serial Game Live ⚡</strong>
+            <span style="font-size:0.78rem;color:var(--text-muted);">V1, V2, V3 + Auto-Sync GitHub.</span>
           </div>
         </a>
         <a href="#sahabat-jariyah" class="pillar-shortcut">
@@ -650,8 +685,28 @@
     </div>
   </section>
 
+  <!-- SECTION C-0: ARENA SERIAL GAME EDUKASI (3 SERI LIVE + AUTO-SYNC GITHUB) -->
+  <section id="arena-game" class="block alt-bg" style="padding-bottom:26px;border-bottom:none;">
+    <div class="container">
+      <div class="sec-head">
+        <div>
+          <span class="sec-kicker">Arena Game Interaktif • Auto-Sync Repositori GitHub Pages</span>
+          <h2 class="sec-title">Serial Game Edukasi Al Muttaqin Kids</h2>
+          <p class="sec-sub">Tiga seri game resmi sudah bisa dimainkan langsung dari HP &amp; laptop tanpa instalasi. Setiap seri game baru yang dirilis di GitHub Pages (V4, V5, dst.) akan <strong>terdeteksi &amp; tampil otomatis</strong> di sini.</p>
+        </div>
+        <div class="sync-status-bar" id="gameSyncStatus">
+          <span class="sync-dot"></span>
+          <span id="gameSyncText">Auto-Sync GitHub Aktif • 3 Serial Game Live</span>
+          <button type="button" class="sync-refresh-btn" id="btnRefreshGames">↻ Cek Game Baru</button>
+        </div>
+      </div>
+
+      <div class="games-grid" id="gamesGrid"></div>
+    </div>
+  </section>
+
   <!-- SECTION C: SHORTS, LIVE GAME & LKS INTERAKTIF RAMAH ANAK -->
-  <section id="tonton" class="block alt-bg">
+  <section id="tonton" class="block alt-bg" style="padding-top:24px;border-top:none;">
     <div class="container">
       <div class="sec-head">
         <div>
@@ -672,8 +727,9 @@
             <p style="font-size:0.83rem;color:#DCEEE4;margin-top:4px;" id="epDesc">
               0–3s Hook (Zahra) → 3–12s Masalah (Al Qosam) → 12–23s Penjelasan (Abi) → 23–28s Penerapan → 28–30s Pesan Penutup.
             </p>
-            <img src="assets/storyboard/MAM_EP001_SALAM_STRIP_V4.webp" alt="Storyboard 5 Panel Episode 001 Yuk Mengucapkan Salam" class="shorts-strip-img" loading="lazy" />
-            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;">
+            <img src="assets/storyboard/MAM_EP001_SALAM_STRIP_V4.webp" alt="Storyboard 5 Panel Episode 001 Yuk Mengucapkan Salam" class="shorts-strip-img" id="shortsStripImg" loading="lazy" />
+            <div class="yt-embed-box" id="ytEmbedBox"><iframe id="ytIframe" allowfullscreen loading="lazy" title="Video Al Muttaqin Kids"></iframe></div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;" id="shortsBtnRow">
               <button class="btn btn-gold btn-sm ep-switch" data-ep="ep1">Ep. 01: Adab Salam</button>
               <button class="btn btn-emerald btn-sm ep-switch" data-ep="ep2">Ep. 02 (QR Bab 2): Wudhu</button>
               <a href="bab/mam-i-01-bab-02/" class="btn btn-sky btn-sm">Buka Halaman QR Bab 2 ↗</a>
@@ -681,12 +737,12 @@
           </div>
 
           <div class="game-promo-box">
-            <span class="book-code-pill">GAME EDUKASI ANIMASI • V1 LIVE</span>
-            <h3 style="font-size:1.22rem;color:#FFF3C4;margin-top:8px;">Jejak Kisah Kampung Al-Muttaqin</h3>
-            <p style="font-size:0.86rem;color:#E6F5EC;margin:6px 0 14px;">
-              Selesaikan <strong>15 Misi Kebaikan</strong> bersama Al Qosam &amp; Kak Zahra di lingkungan Kampung Al-Muttaqin! Bisa langsung dimainkan di HP &amp; laptop tanpa instalasi.
+            <span class="book-code-pill">AUTO-SYNC CMS &amp; GAME • V7.0</span>
+            <h3 style="font-size:1.18rem;color:#FFF3C4;margin-top:8px;">Tersambung ke 3 Seri Game &amp; Google Sheets</h3>
+            <p style="font-size:0.85rem;color:#E6F5EC;margin:6px 0 14px;">
+              Pilih Seri V1, V2, atau V3 di <strong>Arena Game</strong> di atas. Pembaruan buku, produk baru, gambar final, dan kas bulanan dapat disinkronkan otomatis melalui <em>Google Sheets CMS</em>.
             </p>
-            <a href="https://ahmadizzuddinalqosam-bot.github.io/Game-Jejak-Kisah-Kampung-Al-Muttaqin/" target="_blank" rel="noopener" class="btn btn-gold" style="width:100%;">Mainkan Game Sekarang (15 Misi) ↗</a>
+            <a href="#arena-game" class="btn btn-gold" style="width:100%;">Pilih Seri Game (V1 • V2 • V3) ↑</a>
           </div>
         </div>
 
@@ -870,7 +926,7 @@
       </div>
 
       <!-- Real Dashboard KPI from Master Sistem Manajemen Keuangan Terpadu TA 2026/2027 -->
-      <div class="kpi-grid">
+      <div class="kpi-grid" id="kpiGrid">
         <div class="kpi-card">
           <div style="font-size:0.74rem;font-weight:800;color:var(--text-muted);">KAS MASUK BKU (TA 26/27)</div>
           <div class="kpi-val">Rp6.850.000</div>
@@ -1013,7 +1069,7 @@
         </div>
       </div>
       <div style="text-align:center;font-size:0.8rem;color:#A8D6BA;padding-top:18px;">
-        &copy; 2026/2027 Majelis Ta'lim Al Muttaqin • Al Muttaqin Kids Portal v6.0 Complete Canon Edition • GitHub Pages Ready
+        &copy; 2026/2027 Majelis Ta'lim Al Muttaqin • Al Muttaqin Kids Portal v7.0 Full Auto-Sync Edition • <span id="cmsSyncBadge">Auto-Sync Game Aktif</span>
       </div>
     </div>
   </footer>
@@ -1034,6 +1090,7 @@
       loc02: "assets/locations/MAM_LOC02_RUMAHALQOSAM_EXTFRONT_V4.webp", loc02Int: "assets/locations/MAM_LOC02_RUANGKELUARGA_V4.webp",
       loc03: "assets/locations/MAM_LOC03_SDISLAM_EXTFRONT_V4.webp", loc03Int: "assets/locations/MAM_LOC03_KELAS_V4.webp",
       loc04: "assets/locations/MAM_LOC04_RUANGBELAJAR_V4.webp", loc05: "assets/locations/MAM_LOC05_TAMANKAMPUNG_V4.webp", loc06: "assets/locations/MAM_LOC06_PASARWARUNG_V4.webp",
+      gerbang: "assets/locations/MAM_WORLD_GERBANG_KAMPUNG_V4.webp",
       cov01: "assets/covers/MAM_COV_MAMI01_V6.webp", cov02: "assets/covers/MAM_COV_MAMI02_V6.webp", cov03: "assets/covers/MAM_COV_MAMI03_V6.webp",
       cov04: "assets/covers/MAM_COV_MAMI04_V6.webp", cov05: "assets/covers/MAM_COV_MAMI05_V6.webp", cov06: "assets/covers/MAM_COV_MAMI06_V6.webp",
       cov07: "assets/covers/MAM_COV_MAMI07_V6.webp", cov08: "assets/covers/MAM_COV_MAMI08_V6.webp", cov09: "assets/covers/MAM_COV_MAMI09_V6.webp",
@@ -1113,7 +1170,7 @@
     });
 
     // 18 BUKU A5 + 3 BUKU EKSKLUSIF (100% SYNCED WITH DRIVE COVERS, 7 BAB & 6 TAHAP!)
-    const BOOKS = [
+    let BOOKS = [
       { no: "01", eks: false, title: "Fiqih Ibadah Praktis", kl: "KLA-01", klName: "Fiqih & Ibadah", price: "Rp35.000", pages: "74 Hal", status: "SELESAI 100%", stClass: "st-done", cov: ASSETS.cov01, kitab: "Safinatun Naja, Matan Abi Syuja', Fathul Qarib (Mazhab Syafi'i)", awas: "Jangan tergesa berwudhu sampai tumit masih kering! Dalam Mazhab Syafi'i, tumit wajib terbasuh rata hingga mata kaki.", babs: ["Bab 1: Islam & Syahadatain (5 Rukun Islam)", "Bab 2: Thaharah, 7 Air Mutlaq & 6 Rukun Wudhu", "Bab 3: Shalat Lima Waktu & 17 Rukun Sholat", "Bab 4: Puasa Ramadhan", "Bab 5: Zakat Fitrah (2,5 Kg)", "Bab 6: Haji (Pengenalan 6 Rukun Haji)", "Bab 7: Doa, Dzikir & Adab Ibadah"] },
       { no: "02", eks: false, title: "Tajwid Ceria", kl: "KLA-04", klName: "Al-Qur'an & Tajwid", price: "Rp30.000", pages: "64 Hal", status: "Cover Final & Naskah", stClass: "st-done", cov: ASSETS.cov02, kitab: "Tuhfatul Athfal, Muqaddimah Jazariyyah & Rasm Utsmani", awas: "Hati-hati Lahn Jali (kesalahan harakat/huruf) seperti menukar huruf 'Ain (ع) dengan Hamzah (أ) saat membaca Al-Fatihah!", babs: ["Bab 1: Pengantar Tajwid & Adab", "Bab 2: Mengenal Lahn (Jali & Khafi)", "Bab 3: Huruf Hijaiyah & Harakat", "Bab 4: Makharijul & Sifat Huruf", "Bab 5: Hukum Nun & Mim Sukun", "Bab 6: Bacaan Panjang (Mad)", "Bab 7: Waqaf & Sambung Huruf (28 LKS)"] },
       { no: "03", eks: false, title: "Aqidah & Tauhid Ceria", kl: "KLA-02", klName: "Aqidah & Tauhid", price: "Rp30.000", pages: "56 Hal", status: "Cover Final • Batch 1", stClass: "st-done", cov: ASSETS.cov03, kitab: "Aqidatul Awam, Tijan Ad-Darori (Asy'ariyah–Maturidiyah)", awas: "Jangan menyamakan sifat Allah dengan makhluk-Nya (Mukhalafatu lil Hawaditsi).", babs: ["Bab 1: Enam Rukun Iman & Tauhid", "Bab 2: Mengenal Allah & 20 Sifat Wajib Allah", "Bab 3: Iman kepada 10 Malaikat", "Bab 4: Empat Kitab Suci Allah", "Bab 5: Kisah 25 Nabi & Rasul", "Bab 6: Iman Hari Akhir (Kiamat)", "Bab 7: Qadha, Qadar & Tawakkal"] },
@@ -1344,7 +1401,7 @@
     });
 
     // 18 MERCHANDISE (ALL 18 INDIVIDUAL STUDIO 3D PRODUCT IMAGES + ZOOM MODAL!)
-    const MERCH = [
+    let MERCH = [
       { no: "01", kl: "K1", klN: "Ngaji & Sekolah", img: ASSETS.m01, name: "Tas Ransel Santri 3D", spec: "Cordura Waterproof 38×28×14 cm, muat Buku A5, cetak 3D Al Qosam berlatar Musholla Al-Muttaqin 1 lantai." },
       { no: "02", kl: "K1", klN: "Ngaji & Sekolah", img: ASSETS.m02, name: "Tote Bag Kanvas Mengaji", spec: "Kanvas Krem #F8F4E6 tali Hijau #0B6B3A cetak penuh Keluarga Al-Muttaqin (Umi hijab Sage Green)." },
       { no: "03", kl: "K1", klN: "Ngaji & Sekolah", img: ASSETS.m03, name: "Kotak Pensil 2 Tingkat (EVA 3D)", spec: "EVA Hardcase timbul anti-air resleting emas dengan emblem 3D Al Qosam Canon V1.2." },
@@ -1464,6 +1521,343 @@
         `);
       });
     });
+
+    // =========================================================================
+    // V7.0 AUTO-SYNC ENGINE: (1) 3 LIVE GAMES + GITHUB REPO AUTO-DETECT
+    //                        (2) GOOGLE SHEETS CMS LIVE UPDATER (BUKU/MERCH/KAS/SHORTS/GAMES)
+    // =========================================================================
+    const SYNC_CFG = Object.assign({
+      GITHUB_USERNAME: "ahmadizzuddinalqosam-bot",
+      AUTO_SYNC_GITHUB_GAMES: true,
+      GAME_REPO_KEYWORD: "game",
+      GITHUB_CACHE_MINUTES: 360,
+      CMS_WEBAPP_URL: "",
+      CMS_CACHE_MINUTES: 15
+    }, window.AL_MUTTAQIN_SYNC_CONFIG || {});
+
+    const DEFAULT_GAMES = [
+      {
+        seri: "V1",
+        repoKey: "game-jejak-kisah-kampung-al-muttaqin",
+        title: "Jejak Kisah Kampung Al-Muttaqin",
+        url: "https://ahmadizzuddinalqosam-bot.github.io/Game-Jejak-Kisah-Kampung-Al-Muttaqin/",
+        desc: "Selesaikan 15 Misi Kebaikan bersama Al Qosam & Kak Zahra menjelajahi 6 lokasi Kampung Al-Muttaqin.",
+        badge: "SERI 1 • 15 MISI LIVE",
+        img: ASSETS.gerbang,
+        autoDetected: false
+      },
+      {
+        seri: "V2",
+        repoKey: "game-al-muttaqin-kids-v2",
+        title: "Game Al Muttaqin Kids V2",
+        url: "https://ahmadizzuddinalqosam-bot.github.io/Game-al-muttaqin-kids-V2/",
+        desc: "Petualangan edukasi Islam interaktif seri ke-2 dengan tantangan adab, doa harian, dan kuis ceria santri.",
+        badge: "SERI 2 • LIVE",
+        img: ASSETS.loc05,
+        autoDetected: false
+      },
+      {
+        seri: "V3",
+        repoKey: "game-al-muttaqin-kids-v3",
+        title: "Game Al Muttaqin Kids V3",
+        url: "https://ahmadizzuddinalqosam-bot.github.io/Game-Al-Muttaqin-Kids-V3/",
+        desc: "Seri terbaru Game Al Muttaqin Kids V3 — misi ketangkasan, evaluasi ibadah & petualangan santri cilik.",
+        badge: "SERI 3 • TERBARU",
+        img: ASSETS.loc01,
+        autoDetected: false
+      }
+    ];
+
+    let GAMES_LIST = [...DEFAULT_GAMES];
+    const GAME_FALLBACK_THUMBS = [ASSETS.loc04, ASSETS.loc02, ASSETS.loc03, ASSETS.loc06, ASSETS.gerbang];
+
+    function normalizeAssetUrl(rawPath, folderHint) {
+      const p = String(rawPath || "").trim();
+      if (!p) return "";
+      if (/^(https?:|data:image\/|assets\/)/i.test(p)) return p;
+      return `assets/${folderHint}/${p}`;
+    }
+
+    function normalizeGameUrl(u) {
+      return String(u || "").trim().toLowerCase().replace(/\/+$/, "");
+    }
+
+    function prettifyRepoName(repoName) {
+      return String(repoName || "")
+        .replace(/[-_]+/g, " ")
+        .replace(/\b\w/g, c => c.toUpperCase())
+        .replace(/\bAl Muttaqin\b/gi, "Al-Muttaqin")
+        .replace(/\bV(\d+)\b/gi, "V$1");
+    }
+
+    function renderGames() {
+      const grid = document.getElementById("gamesGrid");
+      if (!grid) return;
+      grid.innerHTML = GAMES_LIST.map((g, idx) => {
+        const thumb = g.img || GAME_FALLBACK_THUMBS[idx % GAME_FALLBACK_THUMBS.length];
+        const tagClass = g.autoDetected ? "game-series-tag is-new" : "game-series-tag";
+        return `<article class="game-card ${g.autoDetected ? 'auto-detected' : ''}">
+          <div>
+            <div class="game-thumb-wrap">
+              <img src="${thumb}" alt="${g.title}" loading="lazy" />
+              <span class="${tagClass}">${g.badge}</span>
+            </div>
+            <h3 style="color:var(--brand-emerald-deep);font-size:1.05rem;margin-top:11px;line-height:1.25;">${g.title}</h3>
+            <p style="font-size:0.83rem;color:var(--text-muted);margin-top:5px;">${g.desc}</p>
+          </div>
+          <a href="${g.url}" target="_blank" rel="noopener" class="btn ${idx === 2 || g.autoDetected ? 'btn-gold' : 'btn-emerald'} btn-sm" style="width:100%;">Mainkan ${g.seri || 'Game'} Sekarang ↗</a>
+        </article>`;
+      }).join("");
+      const st = document.getElementById("gameSyncText");
+      if (st) st.textContent = `Auto-Sync GitHub Aktif • ${GAMES_LIST.length} Serial Game Live`;
+    }
+    renderGames();
+
+    async function syncGitHubGames(forceRefresh = false) {
+      if (!SYNC_CFG.AUTO_SYNC_GITHUB_GAMES || !SYNC_CFG.GITHUB_USERNAME) return;
+      const cacheKey = "amk_v7_gh_games_" + SYNC_CFG.GITHUB_USERNAME;
+      const btn = document.getElementById("btnRefreshGames");
+      if (btn) btn.textContent = "Memindai...";
+
+      try {
+        let repos = null;
+        if (!forceRefresh) {
+          const cached = localStorage.getItem(cacheKey);
+          if (cached) {
+            const parsed = JSON.parse(cached);
+            if (Date.now() - parsed.ts < SYNC_CFG.GITHUB_CACHE_MINUTES * 60 * 1000) {
+              repos = parsed.repos;
+            }
+          }
+        }
+        if (!repos) {
+          const resp = await fetch(`https://api.github.com/users/${SYNC_CFG.GITHUB_USERNAME}/repos?per_page=100&sort=updated`);
+          if (!resp.ok) throw new Error("GitHub API status " + resp.status);
+          const raw = await resp.json();
+          repos = Array.isArray(raw) ? raw.map(r => ({
+            name: r.name,
+            description: r.description || "",
+            has_pages: !!r.has_pages,
+            homepage: r.homepage || "",
+            archived: !!r.archived
+          })) : [];
+          try { localStorage.setItem(cacheKey, JSON.stringify({ ts: Date.now(), repos })); } catch (_) {}
+        }
+
+        const kw = (SYNC_CFG.GAME_REPO_KEYWORD || "game").toLowerCase();
+        const existingUrls = new Set(GAMES_LIST.map(g => normalizeGameUrl(g.url)));
+        const existingKeys = new Set(GAMES_LIST.map(g => String(g.repoKey || "").toLowerCase()));
+        let added = 0;
+
+        repos.forEach((r, i) => {
+          if (r.archived) return;
+          const lowerName = String(r.name || "").toLowerCase();
+          if (!lowerName.includes(kw)) return;
+          const liveUrl = (r.homepage && r.homepage.startsWith("http"))
+            ? r.homepage
+            : (r.has_pages ? `https://${SYNC_CFG.GITHUB_USERNAME}.github.io/${r.name}/` : "");
+          if (!liveUrl) return;
+          if (existingUrls.has(normalizeGameUrl(liveUrl)) || existingKeys.has(lowerName)) return;
+
+          const verMatch = r.name.match(/v(\d+)/i);
+          const seriLabel = verMatch ? `V${verMatch[1]}` : `SERI ${GAMES_LIST.length + 1}`;
+          GAMES_LIST.push({
+            seri: seriLabel,
+            repoKey: lowerName,
+            title: prettifyRepoName(r.name),
+            url: liveUrl,
+            desc: r.description || "Game edukasi Islam interaktif terbaru Al Muttaqin Kids (terdeteksi otomatis dari GitHub Pages).",
+            badge: `${seriLabel} • AUTO-SYNC BARU`,
+            img: GAME_FALLBACK_THUMBS[(GAMES_LIST.length + i) % GAME_FALLBACK_THUMBS.length],
+            autoDetected: true
+          });
+          existingUrls.add(normalizeGameUrl(liveUrl));
+          added++;
+        });
+
+        renderGames();
+        const st = document.getElementById("gameSyncText");
+        if (st && added > 0) {
+          st.textContent = `Auto-Sync GitHub • ${GAMES_LIST.length} Game Live (+${added} Baru Terdeteksi!)`;
+        }
+      } catch (err) {
+        // Fallback aman: 3 serial game tetap tampil sempurna
+        console.info("GitHub Auto-Sync fallback ke daftar bawaan:", err.message);
+      } finally {
+        if (btn) btn.textContent = "↻ Cek Game Baru";
+      }
+    }
+
+    const btnRefreshGames = document.getElementById("btnRefreshGames");
+    if (btnRefreshGames) {
+      btnRefreshGames.addEventListener("click", () => syncGitHubGames(true));
+    }
+
+    // Dynamic Shorts list so Google Sheets CMS can append new episodes
+    let SHORTS_DATA = [
+      {
+        kode: "ep1",
+        label: "Ep. 01: Adab Salam",
+        title: "Episode 001: Yuk, Mengucapkan Salam!",
+        desc: "0–3s Hook (Zahra) → 3–12s Masalah (Al Qosam) → 12–23s Penjelasan (Abi) → 23–28s Penerapan → 28–30s Pesan Penutup.",
+        ytId: ""
+      },
+      {
+        kode: "ep2",
+        label: "Ep. 02 (QR Bab 2): Wudhu",
+        title: "Episode 002 (QR Bab 2 MAM-I-01): Hemat Air & Membasuh Tumit Rata",
+        desc: "Rute QR Permanen: /bab/mam-i-01-bab-02/ • Praktik 6 Rukun Wudhu sesuai Mazhab Syafi'i di Area Wudhu Musholla Al-Muttaqin.",
+        ytId: ""
+      }
+    ];
+
+    function renderShortsControls() {
+      const row = document.getElementById("shortsBtnRow");
+      if (!row) return;
+      row.innerHTML = SHORTS_DATA.map((ep, idx) =>
+        `<button class="btn ${idx === 0 ? 'btn-gold' : 'btn-emerald'} btn-sm ep-switch-dyn" data-idx="${idx}">${ep.label}</button>`
+      ).join("") + `<a href="bab/mam-i-01-bab-02/" class="btn btn-sky btn-sm">Buka Halaman QR Bab 2 ↗</a>`;
+
+      row.querySelectorAll(".ep-switch-dyn").forEach(b => {
+        b.addEventListener("click", () => selectShortEpisode(Number(b.dataset.idx)));
+      });
+    }
+
+    function selectShortEpisode(idx) {
+      const ep = SHORTS_DATA[idx];
+      if (!ep) return;
+      document.getElementById("epTitle").textContent = ep.title;
+      document.getElementById("epDesc").textContent = ep.desc;
+      const ytBox = document.getElementById("ytEmbedBox");
+      const ytIframe = document.getElementById("ytIframe");
+      const stripImg = document.getElementById("shortsStripImg");
+      if (ep.ytId && ytBox && ytIframe) {
+        const cleanId = ep.ytId.replace(/^.*(?:youtu\.be\/|v=|shorts\/|embed\/)([^&?\/]+).*$/, "$1");
+        ytIframe.src = `https://www.youtube-nocookie.com/embed/${cleanId}?rel=0`;
+        ytBox.style.display = "block";
+        if (stripImg) stripImg.style.display = "none";
+      } else {
+        if (ytBox) ytBox.style.display = "none";
+        if (ytIframe) ytIframe.src = "";
+        if (stripImg) stripImg.style.display = "block";
+      }
+    }
+    renderShortsControls();
+
+    // Google Sheets CMS Auto-Sync (Books, Merch, KPI Kas, Shorts, Games)
+    async function syncGoogleSheetCMS() {
+      const url = (SYNC_CFG.CMS_WEBAPP_URL || "").trim();
+      if (!url) return;
+      const cacheKey = "amk_v7_cms_cache";
+      try {
+        let data = null;
+        const cached = localStorage.getItem(cacheKey);
+        if (cached) {
+          const parsed = JSON.parse(cached);
+          if (Date.now() - parsed.ts < SYNC_CFG.CMS_CACHE_MINUTES * 60 * 1000) {
+            data = parsed.data;
+          }
+        }
+        if (!data) {
+          const resp = await fetch(url);
+          if (!resp.ok) throw new Error("CMS HTTP " + resp.status);
+          data = await resp.json();
+          if (data && data.ok) {
+            try { localStorage.setItem(cacheKey, JSON.stringify({ ts: Date.now(), data })); } catch (_) {}
+          }
+        }
+        if (!data || !data.ok) return;
+
+        // 1. Update BOOKS from Google Sheet
+        if (Array.isArray(data.books) && data.books.length > 0) {
+          BOOKS = data.books.map(r => {
+            const st = r.STATUS || "Roadmap 2027";
+            const stClass = /selesai|final/i.test(st) ? "st-done" : (/draf|proses/i.test(st) ? "st-draft" : "st-road");
+            return {
+              no: r.NO || "00",
+              eks: /^(YA|TRUE|1)$/i.test(r.EKSKLUSIF || ""),
+              title: r.JUDUL || "Judul Buku",
+              kl: r.KLASTER || "KLA-01",
+              klName: r.NAMA_KLASTER || "Kurikulum Diniyah",
+              price: r.HARGA || "ISO A5",
+              pages: r.HALAMAN || "ISO A5",
+              status: st,
+              stClass,
+              cov: normalizeAssetUrl(r.GAMBAR_COVER, "covers") || ASSETS.cov01,
+              kitab: r.KITAB_RUJUKAN || "Majelis Ta'lim Al Muttaqin",
+              awas: r.AWAS_KELIRU || "Perhatikan adab menuntut ilmu bersama Abi & Umi.",
+              babs: (r.DAFTAR_BAB_PISAH_PIPE || "").split("|").map(s => s.trim()).filter(Boolean)
+            };
+          });
+          renderBooks();
+        }
+
+        // 2. Update MERCH from Google Sheet (supports adding #19, #20, swapping images, adding prices)
+        if (Array.isArray(data.merch) && data.merch.length > 0) {
+          MERCH = data.merch.map(r => ({
+            no: r.NO || "00",
+            kl: r.KLASTER || "K1",
+            klN: r.NAMA_KLASTER || "Merchandise Santri",
+            img: normalizeAssetUrl(r.GAMBAR, "merch") || ASSETS.m01,
+            name: r.NAMA_PRODUK || "Produk Al Muttaqin Kids",
+            spec: (r.SPESIFIKASI || "") + (r.HARGA_OPSIONAL ? ` • Harga: ${r.HARGA_OPSIONAL}` : "")
+          }));
+          renderMerch();
+        }
+
+        // 3. Update KPI KAS BKU & ZISWAF from Google Sheet
+        if (Array.isArray(data.kpi) && data.kpi.length > 0) {
+          const kpiEl = document.getElementById("kpiGrid");
+          if (kpiEl) {
+            kpiEl.innerHTML = data.kpi.map(k => {
+              const hi = /^(YA|TRUE|1)$/i.test(k.SOROT || "");
+              return `<div class="kpi-card" ${hi ? 'style="border-color:var(--accent-gold-badge);background:var(--bg-story-mint);"' : ''}>
+                <div style="font-size:0.74rem;font-weight:800;color:${hi ? 'var(--brand-emerald-deep)' : 'var(--text-muted)'};">${k.LABEL || ''}</div>
+                <div class="kpi-val">${k.NILAI_TAMPIL || '-'}</div>
+                <div style="font-size:0.76rem;color:var(--text-muted);">${k.KETERANGAN || ''}</div>
+              </div>`;
+            }).join("");
+          }
+        }
+
+        // 4. Update SHORTS from Google Sheet
+        if (Array.isArray(data.shorts) && data.shorts.length > 0) {
+          SHORTS_DATA = data.shorts.map(s => ({
+            kode: s.KODE || "ep",
+            label: s.LABEL_TOMBOL || s.JUDUL || "Episode",
+            title: s.JUDUL || "",
+            desc: s.DESKRIPSI || "",
+            ytId: s.YOUTUBE_ID_OPSIONAL || ""
+          }));
+          renderShortsControls();
+          selectShortEpisode(0);
+        }
+
+        // 5. Update GAMES from Google Sheet (then run GitHub auto-detect on top!)
+        if (Array.isArray(data.games) && data.games.length > 0) {
+          GAMES_LIST = data.games.map((g, idx) => ({
+            seri: g.SERI || `V${idx + 1}`,
+            repoKey: (g.URL || "").replace(/\/+$/, "").split("/").pop().toLowerCase(),
+            title: g.JUDUL || "Game Al Muttaqin Kids",
+            url: g.URL || "#",
+            desc: g.DESKRIPSI || "",
+            badge: g.BADGE || `${g.SERI || 'SERI'} • LIVE`,
+            img: normalizeAssetUrl(g.GAMBAR, "locations") || GAME_FALLBACK_THUMBS[idx % GAME_FALLBACK_THUMBS.length],
+            autoDetected: false
+          }));
+          renderGames();
+        }
+
+        const badge = document.getElementById("cmsSyncBadge");
+        if (badge) badge.textContent = "Auto-Sync Game + Google Sheets CMS Aktif ✓";
+      } catch (err) {
+        console.info("Google Sheets CMS fallback ke data bawaan v7.0:", err.message);
+      }
+    }
+
+    // Jalankan sinkronisasi otomatis secara paralel non-blocking
+    syncGoogleSheetCMS().then(() => syncGitHubGames(false));
+
   </script>
 </body>
 </html>
