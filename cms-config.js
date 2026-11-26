@@ -15,6 +15,6 @@ window.AL_MUTTAQIN_SYNC_CONFIG = {
   GITHUB_CACHE_MINUTES: 360, // 6 jam (bisa klik tombol 'Cek Game Baru' kapan saja)
 
   // Tempel URL Web App Google Apps Script di bawah ini (contoh: "https://script.google.com/macros/s/AKfycb.../exec")
-  CMS_WEBAPP_URL: "",
+  CMS_WEBAPP_URL: "https://script.google.com/macros/s/AKfycbyETDlpY-hgZMhjTUkBpCzV7ul54rLGF3w4XrY3tj9eGl_k_8XzZKWDcY20D6yUFyzm/exec",
   CMS_CACHE_MINUTES: 15
 };
